@@ -7,7 +7,7 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Cart from './pages/Cart'
 import Login from './pages/Login'
-import Signup from './pages/SignUp'
+import SignUp from './pages/SignUp'
 import Orders from './pages/Orders'
 import PlaceOrder from './pages/PlaceOrder'
 import Navbar from './components/Navbar'
@@ -24,7 +24,7 @@ function App() {
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/login' element={<Login/>}/>
-        <Route path='/signup' element={<Signup/>}/>
+        <Route path='/signup' element={<SignUp/>}/>
         <Route path='/orders' element={<Orders/>}/>
         <Route path='/place-order' element={<PlaceOrder/>}/>
       </Routes>
