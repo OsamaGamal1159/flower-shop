@@ -4,9 +4,7 @@ import { Link,useNavigate } from 'react-router-dom'
 import { login } from '../store/userSlice'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { RiErrorWarningFill } from "react-icons/ri";
-
-function Signup() {
+function SignUp() {
 
   const initalState = {
     name: "",
@@ -113,4 +111,4 @@ function Signup() {
   )
 }
 
-export default Signup
+export default SignUp
