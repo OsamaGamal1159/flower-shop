@@ -21,7 +21,7 @@ function Navbar() {
 
     
   return (
-    <div className='flex items-center justify-between text-base font-medium pb-10'>
+    <div className='relative flex items-center justify-between text-base font-medium pb-10 z-50'>
         {/* ----------------------------------------Logo----------------------------------------------- */}
         <Link to='/' className='text-5xl text-red-500 italic parisienne-regular'>De Flore.</Link>
         {/* ----------------------------------------NavLink----------------------------------------------- */}
@@ -67,7 +67,7 @@ function Navbar() {
                     size={20} 
                     className='text-gray-800 group-hover:text-white'/>
                     <div className='group-hover:block hidden absolute dropdown-menu right-0 pt-5'>
-                        <div className='flex flex-col gap-2 w-40 py-3 bg-red-400 rounded-xl text-white'>
+                        <div className='flex flex-col gap-2 w-40 py-3 bg-red-400 rounded-xl text-white z-50'>
                             <p className='cursor-pointer text-center hover:bg-red-300 p-2'>My Profile</p>
                             <p className='cursor-pointer text-center hover:bg-red-300 p-2'>Orders</p>
                             <p className='cursor-pointer text-center hover:bg-red-300 p-2'

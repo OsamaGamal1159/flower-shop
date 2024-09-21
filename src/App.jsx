@@ -1,6 +1,5 @@
 import React from 'react'
 import { Routes,Route } from 'react-router-dom'
-import { useSelector } from 'react-redux'
 
 import Home from './pages/Home'
 import Product from './pages/Product'
@@ -15,11 +14,6 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
 function App() {
-
-  const user = useSelector((state)=>state.user.user)
-
-  console.log(user)
-
   return (
     <div className='min-h-screen h-screen py-10 px-20'>
       <Navbar/>

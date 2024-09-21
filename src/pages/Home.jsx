@@ -6,7 +6,6 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
 import slider_1 from '../assets/slider-img/slider-1.jpg'
 import slider_2 from '../assets/slider-img/slider-2.jpg'
 import slider_3 from '../assets/slider-img/slider-3.jpg'
@@ -21,7 +20,7 @@ function Home() {
   return (
     <div>
       <Swiper
-        className='relative group'
+        className='relative group z-10'
         spaceBetween={50}
         slidesPerView={1}
         navigation={{

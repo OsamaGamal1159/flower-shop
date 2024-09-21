@@ -73,12 +73,8 @@ function Signup() {
               onChange={handleOnChange}
               required
               className='relative w-full border-b-2 border-gray-300 outline-none focus:outline-none focus:border-black text-md py-2 px-5'/>
-            <span className='absolute right-5 top-3'>
-              <RiErrorWarningFill size={20} className='text-gray-500 '/>
-            </span>
               {errors.name && <p className="text-red-500">{errors.name}</p>}
           </div>
-          
           <input 
             type='text'
             name='mobile_number'
