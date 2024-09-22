@@ -9,7 +9,6 @@ import Cart from './pages/Cart'
 import Login from './pages/Login'
 import SignUp from './pages/SignUp'
 import Orders from './pages/Orders'
-import PlaceOrder from './pages/PlaceOrder'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
@@ -26,7 +25,6 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/signup' element={<SignUp/>}/>
         <Route path='/orders' element={<Orders/>}/>
-        <Route path='/place-order' element={<PlaceOrder/>}/>
       </Routes>
       <Footer/>
     </div>

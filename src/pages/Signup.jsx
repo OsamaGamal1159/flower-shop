@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import bg_signup from '../assets/bg-signup.jpg'
 import { Link,useNavigate } from 'react-router-dom'
-import { login } from '../store/userSlice'
+import { signup } from '../store/userSlice'
 import { useDispatch, useSelector } from 'react-redux'
 
 function SignUp() {
@@ -37,7 +37,7 @@ function SignUp() {
     const formErrors = validationForm()
     setErrors(formErrors)
     if(Object.keys(formErrors).length===0){
-      dispatch(login(values))
+      dispatch(signup(values))
       setIsSubmit(true)
     }
   }

@@ -1,8 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import bg_login from '../assets/login-bg.jpg'
 import { Link } from 'react-router-dom'
+import { login } from '../store/userSlice' 
 
 function Login() {
+
+  const initalState = {
+    email: '',
+    password: ''
+  }
+
+  const [values, setValues]=useState(initalState)
+  
+  const handleOnChange=(e)=>{
+    const { value } = e.value
+    setValues(value)
+  }
+  console.log(values)
   return (
     <div className='grid grid-cols-[1fr_1fr] pb-20 pt-2 px-10 h-full'>
       <div className='relative w-full h-full bg-cover bg-bottom bg-no-repeat bg-red-300'
@@ -22,12 +36,16 @@ function Login() {
             type='email'
             name='email'
             placeholder='Email'
+            value={values.email}
+            onChange={handleOnChange}
             required
             className='w-full border-b-2 border-gray-300 outline-none focus:outline-none focus:border-black text-md py-2 px-5'/>
           <input 
             type='password'
             name='password'
             placeholder='Password'
+            value={values.password}
+            onChange={handleOnChange}
             required
             className='w-full border-b-2 border-gray-300 outline-none focus:outline-none focus:border-black text-md py-2 px-5'/>
         </div>
