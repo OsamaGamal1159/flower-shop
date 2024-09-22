@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import bg_login from '../assets/login-bg.jpg'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { login } from '../store/userSlice' 
+import { useDispatch, useSelector } from 'react-redux'
 
 function Login() {
 
@@ -10,13 +11,53 @@ function Login() {
     password: ''
   }
 
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
   const [values, setValues]=useState(initalState)
-  
+  const [errors,setErrors]=useState('')
+  const [isSubmit,setIsSubmit]=useState(false)
+  const user = useSelector((state)=>state.user.user)
+  const authUser = user.authUser
+  const authError = useSelector((state)=>state.user.error)
+  console.log(authUser)
+  console.log(authError)
+
   const handleOnChange=(e)=>{
-    const { value } = e.value
-    setValues(value)
+    const { name,value } = e.target
+    setValues({...values,[name]:value})
   }
+
+  const FormValidation=()=>{
+    let formErrors = {}
+    //Check Email
+    if(!values.email) {
+      formErrors.email = 'Email is required'
+    } else if(!/^\S+@\S+\.\S+$/.test(values.email)){
+      formErrors.email = 'Invalid email format!'
+    }
+    //Check Password
+    if(!values.password) {
+      formErrors.password = 'Password is required'
+    } else if(!/^(?=.*[0-9])(?=.*[a-zA-Z])[a-zA-Z0-9]{4,10}$/i.test(values.password)){
+      formErrors.password = 'Invalid password format!'
+    }
+    return formErrors
+  }
+
+  const handleClickLogin=()=>{
+    const FormErrors = FormValidation()
+    setErrors(FormErrors)
+    if(Object.keys(FormErrors).length===0){
+      dispatch(login(values))
+      setIsSubmit(true)
+    }
+  }
+  useEffect(()=>{
+    if(authUser&&isSubmit){navigate('/')}
+  },[authUser,navigate,isSubmit])
+
   console.log(values)
+
   return (
     <div className='grid grid-cols-[1fr_1fr] pb-20 pt-2 px-10 h-full'>
       <div className='relative w-full h-full bg-cover bg-bottom bg-no-repeat bg-red-300'
@@ -40,6 +81,7 @@ function Login() {
             onChange={handleOnChange}
             required
             className='w-full border-b-2 border-gray-300 outline-none focus:outline-none focus:border-black text-md py-2 px-5'/>
+            {errors.email && <p className='text-red-500'>{errors.email}</p>}
           <input 
             type='password'
             name='password'
@@ -48,6 +90,7 @@ function Login() {
             onChange={handleOnChange}
             required
             className='w-full border-b-2 border-gray-300 outline-none focus:outline-none focus:border-black text-md py-2 px-5'/>
+            {errors.password && <p className='text-red-500'>{errors.password}</p>}
         </div>
         <div className='flex justify-between w-full py-2'>
           <div className='flex items-center gap-2'>
@@ -59,7 +102,10 @@ function Login() {
           </div>
           <p className='text-md font-medium underline underline-offset-2 cursor-pointer'>Forget Password ?</p>
         </div>
-        <button className='w-full rounded-md bg-red-400 text-lg font-bold text-white py-3 mt-5'>Log in</button>
+        {authError && <p className='w-full text-center text-red-500 font-medium bg-red-100 p-3 mt-7'>{authError}</p>}
+        <button 
+          className='w-full rounded-md bg-red-400 text-lg font-bold text-white py-3 mt-8'
+          onClick={handleClickLogin}>Log in</button>
         <p className='pt-5'>Don't you have a account? <Link to ='/signup' className='font-medium underline underline-offset-2 cursor-pointer'>Sign up for free</Link></p>
       </div>
     </div>

@@ -1,10 +1,11 @@
 import React from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { addToCart, removeFromCart,deleteFromCart } from '../store/cartSlice'
+import { addToCart, removeFromCart,deleteFromCart, clearCart } from '../store/cartSlice'
 
 import { ImHome } from "react-icons/im";
 import { BsCart4 } from "react-icons/bs";
+import { addPurchase } from '../store/userSlice';
 
 function Cart() {
   const dispatch = useDispatch()
@@ -12,7 +13,7 @@ function Cart() {
   const totalPrice = useSelector((state)=>state.cart.totalPrice)
   const totalAmount = useSelector((state)=>state.cart.totalAmount)
 
-  function handleAddToCart(item){
+  const handleAddToCart=(item)=>{
     dispatch(addToCart({
         id: item.id,
         name: item.name,
@@ -22,12 +23,34 @@ function Cart() {
         image: item.img,
     }))
   }
-  function handleRemoveFromCart(item){
+  const handleRemoveFromCart=(item)=>{
     dispatch(removeFromCart(item))
   }
-  function handleDeleteFromCart(item){
+  const handleDeleteFromCart=(item)=>{
     dispatch(deleteFromCart({id:item.id}))
   }
+  const handleCheckOut=()=>{
+    const purchase ={
+      id: Date.now(),
+      date: new Date().toLocaleString(),
+      item: cart.map((item)=>({
+        id: item.id,
+        name: item.name,
+        price: item.price,
+        amount: item.amount,
+        image: item.img
+      })),
+      totalAmount: totalAmount,
+      totalPrice: totalPrice
+    }
+
+    dispatch(addPurchase(purchase))
+    dispatch(clearCart())
+
+    alert('Purchase Successful!')
+    console.log(purchase)
+  }
+  
 
   return (
     <div className='pb-40 text-gray-700'>
@@ -102,7 +125,9 @@ function Cart() {
                 <hr/>
                 <p>Tax Included</p>
                 <div className='flex justify-center'>
-                  <button className='flex justify-between text-xl font-bold text-white bg-red-500 w-[97%] rounded-xl px-5 py-3 mt-4 hover:bg-red-600 transition-colors duration-100'>
+                  <button 
+                    className='flex justify-between text-xl font-bold text-white bg-red-500 w-[97%] rounded-xl px-5 py-3 mt-4 hover:bg-red-600 transition-colors duration-100'
+                    onClick={handleCheckOut}>
                     <p>Check Out</p>
                     <p>$ {totalPrice}</p>
                     </button>

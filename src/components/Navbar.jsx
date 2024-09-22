@@ -1,22 +1,24 @@
 import React, { useState } from 'react'
-import { NavLink,Link } from 'react-router-dom';
+import { NavLink,Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../store/userSlice';
 
 import { FiShoppingCart } from "react-icons/fi";
 import { BiSearchAlt } from "react-icons/bi";
-import { GoPerson } from "react-icons/go";
+import { BsPerson } from "react-icons/bs";
 
 
 function Navbar() {
 
     const dispatch = useDispatch()
+    const navigate = useNavigate()
     const totalAmount = useSelector((state)=>state.cart.totalAmount)
     const user = useSelector((state)=>state.user.user)
     const { name,authUser } = user
 
     const handleLogout=()=>{
         dispatch(logout())
+        navigate('/')
     }
 
     
@@ -43,14 +45,17 @@ function Navbar() {
                 <hr className='w-3/4 h-[3px] bg-red-500 hidden'/>
             </NavLink>
         </ul>
-        {/* ----------------------------------------Search----------------------------------------------- */}
+        {/* ---------------------------------Greeting----------------------------------------- */}
         <div className='flex gap-2 items-center'>
+            {authUser?<p className='text-red-500 font-medium pr-5'>Hi! <span>{name.slice(0,5)}</span></p>:''}
+
+            {/* ---------------------------------Search----------------------------------------- */}
             <div className='cursor-pointer hover:bg-red-400 rounded-full p-2 transition-colors duration-200 group'>
                 <BiSearchAlt
                     size={25} 
                     className='text-gray-800 group-hover:text-white'/>
             </div>
-            {/* ----------------------------------------Cart----------------------------------------------- */}
+            {/* -----------------------------------Cart------------------------------------------ */}
             <Link to='/cart' className='relative cursor-pointer hover:bg-red-400 rounded-full p-3 transition-colors duration-200 group'>
                 <FiShoppingCart
                     size={20}
@@ -60,16 +65,18 @@ function Navbar() {
                 ):('')}
                 
             </Link>
-            {/* ----------------------------------------Login----------------------------------------------- */}
+            {/* ----------------------------------Login----------------------------------------- */}
             {authUser?(
                 <div className='relative cursor-pointer hover:bg-red-400 rounded-full p-3 transition-colors duration-200 group'>
-                    <GoPerson 
-                    size={20} 
-                    className='text-gray-800 group-hover:text-white'/>
+                    <BsPerson 
+                    size={22} 
+                    className='text-black group-hover:text-white'/>
                     <div className='group-hover:block hidden absolute dropdown-menu right-0 pt-5'>
                         <div className='flex flex-col gap-2 w-40 py-3 bg-red-400 rounded-xl text-white z-50'>
                             <p className='cursor-pointer text-center hover:bg-red-300 p-2'>My Profile</p>
-                            <p className='cursor-pointer text-center hover:bg-red-300 p-2'>Orders</p>
+                            <Link to ='/orders'>
+                                <p className='cursor-pointer text-center hover:bg-red-300 p-2'>Orders</p>
+                            </Link>
                             <p className='cursor-pointer text-center hover:bg-red-300 p-2'
                             onClick={handleLogout}>Logout</p>
                         </div>
@@ -77,9 +84,9 @@ function Navbar() {
                 </div>
             ):(
                 <Link to='/login' className='relative cursor-pointer hover:bg-red-400 rounded-full p-3 transition-colors duration-200 group'>
-                        <GoPerson 
-                        size={20} 
-                        className='text-gray-800 group-hover:text-white'/>
+                        <BsPerson 
+                        size={22}
+                        className='text-black group-hover:text-white'/>
                 </Link>
             )}
             

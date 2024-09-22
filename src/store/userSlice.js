@@ -6,7 +6,8 @@ const initialState = {
     mobile_number: '',
     email: '',
     password: '',
-    authUser: false
+    authUser: false,
+    purchaseHistory:[]
   },
   error:null
 }
@@ -18,49 +19,54 @@ export const userSlice = createSlice({
     signup (state,action){
         const userId = action.payload
         const nameValidation = /^[A-Za-z]{4,10}$/i.test(userId.name)
+        const mobileValidation = /^(06|08|09)\d{8}$/.test(userId.mobile_number)
+        const emailValidation = /^\S+@\S+\.\S+$/.test(userId.email)
         const passwordValidation = /^(?=.*[0-9])(?=.*[a-zA-Z])[a-zA-Z0-9]{4,10}$/i.test(userId.password)
         state.user=userId
-        if(!nameValidation || !passwordValidation){
+        if(!nameValidation || !mobileValidation || !emailValidation || !passwordValidation){
             state.user.authUser = false
+            state.error='Name, Mobile Number,Email or Password is Fail. Please try again.'
         } else {
             state.user.authUser = true
             const saveUser = JSON.stringify(userId)
             sessionStorage.setItem('User',saveUser)
+            state.error=null
         }
     },
     login(state,action){
       const userId = action.payload
       const userAccount = [
-        {id:1,
-        name:'User_1',
-        mobile_number:'06x-xxx-xxxx',
-        email:'user_1@gmail.com',
-        password: 'user1234'
+        { name:'User1',
+          mobile_number:'06x-xxx-xxxx',
+          email:'user_1@gmail.com',
+          password: 'user1234'
         },
-        {id:2,
-        name:'User_2',
-        mobile_number:'08x-xxx-xxxx',
-        email:'user_2@gmail.com',
-        password: 'user5678'
+        { name:'User2',
+          mobile_number:'08x-xxx-xxxx',
+          email:'user_2@gmail.com',
+          password: 'user5678'
         },
-        {id:3,
-        name:'User_3',
-        mobile_number:'09x-xxx-xxxx',
-        email:'user_3@gmail.com',
-        password: 'Useruser'
+        { name:'User3',
+          mobile_number:'09x-xxx-xxxx',
+          email:'user_3@gmail.com',
+          password: 'user555'
         },
-        {id:4,
-        name:'User_4',
-        mobile_number:'09-xxx-xxxx',
-        email:'user_4@gmail.com',
-        password: 'User1212'
+        { name:'User4',
+          mobile_number:'09-xxx-xxxx',
+          email:'user_4@gmail.com',
+          password: 'user1212'
         }]
-        state.user = userId
-        if(userId.email===userAccount.forEach((user)=>user.email) && userId.password===userAccount.forEach((user)=>user.password)){
-          state.user.authUser = true
-          const saveUser = JSON.stringify(userId)
+
+        const findUser = userAccount.find((user)=>user.email===userId.email && user.password===userId.password)
+
+        if(findUser){
+          state.user = {...findUser,authUser:true}
+          const saveUser = JSON.stringify(state.user)
           sessionStorage.setItem('User',saveUser)
-        } else {state.user.authUser = false}
+        } else {
+          state.user.authUser = false
+          state.error='Email or Password is Fail. Please try again.'
+        }
     },
     logout (state){
         state.user = {
@@ -71,9 +77,18 @@ export const userSlice = createSlice({
             authUser: false
         }
         sessionStorage.clear()
+        state.error=null
+    },
+    addPurchase(state,action){
+      const purchase = action.payload
+      if(!purchase.length ===0){
+        state.user.purchaseHistory.push(purchase)
+        const saveUser = JSON.stringify(state.user)
+        sessionStorage.setItem('User',saveUser)
+      }
     }
   }
 })
 
-export const { signup,login,logout } = userSlice.actions
+export const { signup,login,logout,addPurchase } = userSlice.actions
 export default userSlice.reducer;

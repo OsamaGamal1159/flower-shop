@@ -7,10 +7,10 @@ import { useDispatch, useSelector } from 'react-redux'
 function SignUp() {
 
   const initalState = {
-    name: "",
-    mobile_number: "",
-    email: "",
-    password: ""
+    name: '',
+    mobile_number: '',
+    email: '',
+    password: ''
   }
   const dispatch=useDispatch()
   const navigate=useNavigate()
@@ -18,7 +18,8 @@ function SignUp() {
   const [isSubmit, setIsSubmit] = useState(false)
   const [errors, setErrors] = useState({})
   const user = useSelector((state)=>state.user.user)
-  const authUser = user
+  const authUser = user.authUser
+  const authError = useSelector((state)=>state.user.error)
 
   const handleOnChange=(e)=>{
     const { name, value } = e.target
@@ -27,13 +28,34 @@ function SignUp() {
 
   const validationForm=()=>{
     let formErrors = {}
-    if(!values.name) formErrors.name = "Name is required"
-    if(!values.mobile_number) formErrors.mobile_number = "Mobile number is required"
-    if(!values.email) formErrors.email = "Email is required"
-    if(!values.password) formErrors.password = "Password is required"
+    // Check Name
+    if(!values.name) {
+      formErrors.name = 'Name is required'
+    } else if(!/^[A-Za-z]{4,10}$/i.test(values.name)){
+      formErrors.name = 'Invalid name format!'
+    }
+    // Check Mobile Number
+    if(!values.mobile_number){
+      formErrors.mobile_number = 'Mobile number is required'
+    } else if(!/^(06|08|09)\d{8}$/.test(values.mobile_number)){
+      formErrors.mobile_number = 'Invalid mobile number format!'
+    }
+    // Check Email
+    if(!values.email) {
+      formErrors.email = 'Email is required' 
+    } else if(!/^\S+@\S+\.\S+$/.test(values.email)){
+      formErrors.email = 'Invalid email format!'
+    }
+    // Check Password
+    if(!values.password) {
+      formErrors.password = 'Password is required'
+    } else if(!/^(?=.*[0-9])(?=.*[a-zA-Z])[a-zA-Z0-9]{4,10}$/i.test(values.password)){
+      formErrors.password = 'Invalid password format!'
+    }
     return formErrors
   }
-  const handleLogin=()=>{
+
+  const handleClickSignup=()=>{
     const formErrors = validationForm()
     setErrors(formErrors)
     if(Object.keys(formErrors).length===0){
@@ -101,10 +123,11 @@ function SignUp() {
             className='w-full border-b-2 border-gray-300 outline-none focus:outline-none focus:border-black text-md py-2 px-5'/>
             {errors.password && <p className="text-red-500">{errors.password}</p>}
         </div>
+        {authError && <p className='w-full text-center text-red-500 font-medium bg-red-100 p-3 my-5'>{authError}</p>}
         <button
           type='submit'
-          onClick={handleLogin}
-          className='w-full rounded-md bg-green-2 text-lg font-bold text-white py-3 mt-10'>Sign Up</button>
+          onClick={handleClickSignup}
+          className='w-full rounded-md bg-green-2 text-lg font-bold text-white py-3 mt-5'>Sign Up</button>
         <p className='pt-5'>Do you have a account? <Link to ='/login' className='font-medium underline underline-offset-2 cursor-pointer'>Log in</Link></p>
       </div>
     </div>
