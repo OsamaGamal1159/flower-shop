@@ -82,7 +82,7 @@ function About() {
         </div>
       </div>
       <div className='text-lg py-10 px-7 leading-9 bg-red-100 mt-10'>
-          <p>We are more than just a flower shop - we are your trusted partner for all life's moments, big and small. With our dedication to quality, creativity, and customer service, we strive to make every order a memorable one. Thank you for choosing our De Flore, where every bloom tells a story!</p>
+          <p><span className='text-4xl font-bold text-red-400'>We are more than just a flower shop,</span> we are your trusted partner for all life's moments, big and small. With our dedication to quality, creativity, and customer service, we strive to make every order a memorable one. Thank you for choosing our De Flore, where every bloom tells a story!</p>
       </div>
       
     

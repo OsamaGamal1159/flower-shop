@@ -27,7 +27,7 @@ function Footer() {
                 <p className='text-xl font-bold'>Contact us</p>
                 <hr className='w-1/6 h-[5px] my-2 bg-red-500'/>
                 <ul className='flex flex-col justify-center text-md gap-1'>
-                    <li>+66 83-462-0925</li>
+                    <li>+1 (555) 123-4567</li>
                     <li>contact@deflore.com</li>
                 </ul>
             </div>

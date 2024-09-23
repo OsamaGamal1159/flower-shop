@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import bg_login from '../assets/login-bg.jpg'
+import bg_login from '../assets/bg-login.jpg'
 import { Link, useNavigate } from 'react-router-dom'
 import { login } from '../store/userSlice' 
 import { useDispatch, useSelector } from 'react-redux'
@@ -59,7 +59,7 @@ function Login() {
   console.log(values)
 
   return (
-    <div className='grid grid-cols-[1fr_1fr] pb-20 pt-2 px-10 h-full'>
+    <div className='grid grid-cols-2 pb-20 pt-2 px-10 h-full'>
       <div className='relative w-full h-full bg-cover bg-bottom bg-no-repeat bg-red-300'
            style={{ backgroundImage:`url(${bg_login})`}}>
           {/* Overlay */}

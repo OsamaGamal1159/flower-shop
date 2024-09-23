@@ -178,5 +178,32 @@ export const flowers = [
       image: "/images/zinnia.jpg",
       details: "Zinnias symbolize lasting friendship and constancy.",
       category: "flowers"
-    }
+    },
+    {
+      id: 21,
+      name: "Vase",
+      price: 15,
+      description: "Elegant glass vase perfect for displaying flower arrangements.",
+      image: "/images/vase.jpg",
+      details: "A sleek, modern vase that adds style to any flower display.",
+      category: "baskets"
+    },
+    {
+      id: 22,
+      name: "Flower Basket",
+      price: 20,
+      description: "Woven basket perfect for rustic and garden-themed arrangements.",
+      image: "/images/flower-basket.jpg",
+      details: "A charming basket that is ideal for carrying or presenting flower arrangements.",
+      category: "baskets"
+    },
+    {
+      id: 23,
+      name: "Ribbon",
+      price: 6,
+      description: "Decorative ribbon for tying and embellishing bouquets.",
+      image: "/images/ribbon.jpg",
+      details: "Available in various colors and textures to add a finishing touch to arrangements.",
+      category: "baskets"
+    },
   ];

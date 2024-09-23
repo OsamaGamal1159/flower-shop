@@ -4,6 +4,8 @@ import { Link,useNavigate } from 'react-router-dom'
 import { signup } from '../store/userSlice'
 import { useDispatch, useSelector } from 'react-redux'
 
+import { RiErrorWarningFill } from "react-icons/ri";
+
 function SignUp() {
 
   const initalState = {
@@ -94,6 +96,7 @@ function SignUp() {
               required
               className='relative w-full border-b-2 border-gray-300 outline-none focus:outline-none focus:border-black text-md py-2 px-5'/>
               {errors.name && <p className="text-red-500">{errors.name}</p>}
+              <RiErrorWarningFill size={20} className='absolute top-2 right-2 text-gray-500'/>
           </div>
           <input 
             type='text'
