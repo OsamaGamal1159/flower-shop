@@ -5,7 +5,7 @@ import { signup } from '../store/userSlice'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { RiErrorWarningFill } from "react-icons/ri";
-import Tooltip from '../components/ToolTip'
+import Tooltip from '../components/Tooltip'
 
 function SignUp() {
 
