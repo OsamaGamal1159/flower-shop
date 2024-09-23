@@ -7,7 +7,7 @@ const initialState = {
     email: '',
     password: '',
     authUser: false,
-    purchaseHistory:[]
+    purchaseHistory: []
   },
   error:null
 }
@@ -39,22 +39,26 @@ export const userSlice = createSlice({
         { name:'User1',
           mobile_number:'06x-xxx-xxxx',
           email:'user_1@gmail.com',
-          password: 'user1234'
+          password: 'user1234',
+          purchaseHistory:[]
         },
         { name:'User2',
           mobile_number:'08x-xxx-xxxx',
           email:'user_2@gmail.com',
-          password: 'user5678'
+          password: 'user5678',
+          purchaseHistory:[]
         },
         { name:'User3',
           mobile_number:'09x-xxx-xxxx',
           email:'user_3@gmail.com',
-          password: 'user555'
+          password: 'user555',
+          purchaseHistory:[]
         },
         { name:'User4',
           mobile_number:'09-xxx-xxxx',
           email:'user_4@gmail.com',
-          password: 'user1212'
+          password: 'user1212',
+          purchaseHistory:[]
         }]
 
         const findUser = userAccount.find((user)=>user.email===userId.email && user.password===userId.password)
@@ -74,18 +78,18 @@ export const userSlice = createSlice({
             mobile_number: '',
             email: '',
             password: '',
-            authUser: false
+            authUser: false,
+            purchaseHistory:[]
         }
-        sessionStorage.clear()
         state.error=null
+        sessionStorage.clear()
+        
     },
     addPurchase(state,action){
       const purchase = action.payload
-      if(!purchase.length ===0){
-        state.user.purchaseHistory.push(purchase)
-        const saveUser = JSON.stringify(state.user)
-        sessionStorage.setItem('User',saveUser)
-      }
+      state.user.purchaseHistory.push(purchase)
+      const saveUser = JSON.stringify(state.user)
+      sessionStorage.setItem('User',saveUser)
     }
   }
 })

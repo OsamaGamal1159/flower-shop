@@ -32,7 +32,7 @@ function Cart() {
   const handleCheckOut=()=>{
     const purchase ={
       id: Date.now(),
-      date: new Date().toLocaleString(),
+      date: new Date().toLocaleDateString('en-US'),
       item: cart.map((item)=>({
         id: item.id,
         name: item.name,
@@ -51,7 +51,6 @@ function Cart() {
     console.log(purchase)
   }
   
-
   return (
     <div className='pb-40 text-gray-700'>
       <h3 className='text-gray-700 text-3xl font-bold leading-9'>My Cart</h3>

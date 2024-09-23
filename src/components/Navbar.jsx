@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { NavLink,Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../store/userSlice';
@@ -6,7 +6,7 @@ import { logout } from '../store/userSlice';
 import { FiShoppingCart } from "react-icons/fi";
 import { BiSearchAlt } from "react-icons/bi";
 import { BsPerson } from "react-icons/bs";
-
+import { MdOutlineWavingHand } from "react-icons/md";
 
 function Navbar() {
 
@@ -47,7 +47,7 @@ function Navbar() {
         </ul>
         {/* ---------------------------------Greeting----------------------------------------- */}
         <div className='flex gap-2 items-center'>
-            {authUser?<p className='text-red-500 font-medium pr-5'>Hi! <span>{name.slice(0,5)}</span></p>:''}
+            {authUser?<p className='text-red-500 font-medium pr-5 flex items-center gap-3'>Hi! {name.slice(0,5)}<span><MdOutlineWavingHand/></span></p>:''}
 
             {/* ---------------------------------Search----------------------------------------- */}
             <div className='cursor-pointer hover:bg-red-400 rounded-full p-2 transition-colors duration-200 group'>
@@ -73,7 +73,6 @@ function Navbar() {
                     className='text-black group-hover:text-white'/>
                     <div className='group-hover:block hidden absolute dropdown-menu right-0 pt-5'>
                         <div className='flex flex-col gap-2 w-40 py-3 bg-red-400 rounded-xl text-white z-50'>
-                            <p className='cursor-pointer text-center hover:bg-red-300 p-2'>My Profile</p>
                             <Link to ='/orders'>
                                 <p className='cursor-pointer text-center hover:bg-red-300 p-2'>Orders</p>
                             </Link>
