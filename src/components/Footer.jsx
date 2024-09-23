@@ -24,7 +24,7 @@ function Footer() {
                 </ul>
             </div>
             <div className='flex flex-col justify-start'>
-                <p className='text-xl font-bold'>Contact us</p>
+                <p className='text-xl font-bold'>Contact Us</p>
                 <hr className='w-1/6 h-[5px] my-2 bg-red-500'/>
                 <ul className='flex flex-col justify-center text-md gap-1'>
                     <li>+1 (555) 123-4567</li>

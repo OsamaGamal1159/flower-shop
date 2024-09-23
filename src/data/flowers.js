@@ -206,4 +206,13 @@ export const flowers = [
       details: "Available in various colors and textures to add a finishing touch to arrangements.",
       category: "baskets"
     },
+    {
+      id: 24,
+      name: "Wrapper Paper",
+      price: 8,
+      description: "Elegant wrapper paper for wrapping floral arrangements.",
+      image: "/images/wrapper-paper.jpg",
+      details: "Available in different designs and textures, perfect for enhancing the presentation of bouquets.",
+      category: "baskets"
+    }
   ];

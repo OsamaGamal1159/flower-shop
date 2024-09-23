@@ -6,7 +6,6 @@ const initialState = {
   flowers:[],
   isModalOpen: false,
   selectedFlower: null
-
 }
 
 export const flowersSlice = createSlice({
@@ -15,10 +14,10 @@ export const flowersSlice = createSlice({
   reducers: {
     setRecommend(state,action){
       const category = action.payload
-      if(category){
-        state.recommend = flowers.filter((flower)=>flower.category === category).slice(0,10)
+      if(category && category.toLowerCase() !== 'all'){
+        state.recommend = state.flowers.filter((flower)=>flower.category.toLowerCase() === category.toLowerCase()).slice(0,10)
       } else {
-        state.recommend = flowers.slice(0,10)
+        state.recommend = state.flowers.slice(0,10)
       }
     },
     setFlowers(state){

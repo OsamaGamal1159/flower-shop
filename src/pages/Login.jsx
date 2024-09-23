@@ -10,7 +10,6 @@ function Login() {
     email: '',
     password: ''
   }
-
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const [values, setValues]=useState(initalState)
@@ -19,14 +18,11 @@ function Login() {
   const user = useSelector((state)=>state.user.user)
   const authUser = user.authUser
   const authError = useSelector((state)=>state.user.error)
-  console.log(authUser)
-  console.log(authError)
 
   const handleOnChange=(e)=>{
     const { name,value } = e.target
     setValues({...values,[name]:value})
   }
-
   const FormValidation=()=>{
     let formErrors = {}
     //Check Email
@@ -43,7 +39,6 @@ function Login() {
     }
     return formErrors
   }
-
   const handleClickLogin=()=>{
     const FormErrors = FormValidation()
     setErrors(FormErrors)
@@ -55,8 +50,6 @@ function Login() {
   useEffect(()=>{
     if(authUser&&isSubmit){navigate('/')}
   },[authUser,navigate,isSubmit])
-
-  console.log(values)
 
   return (
     <div className='grid grid-cols-2 pb-20 pt-2 px-10 h-full'>

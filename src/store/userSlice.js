@@ -37,25 +37,25 @@ export const userSlice = createSlice({
       const userId = action.payload
       const userAccount = [
         { name:'User1',
-          mobile_number:'06x-xxx-xxxx',
+          mobile_number:'0612345678',
           email:'user_1@gmail.com',
           password: 'user1234',
           purchaseHistory:[]
         },
         { name:'User2',
-          mobile_number:'08x-xxx-xxxx',
+          mobile_number:'0812345678',
           email:'user_2@gmail.com',
           password: 'user5678',
           purchaseHistory:[]
         },
         { name:'User3',
-          mobile_number:'09x-xxx-xxxx',
+          mobile_number:'0912345678',
           email:'user_3@gmail.com',
           password: 'user555',
           purchaseHistory:[]
         },
         { name:'User4',
-          mobile_number:'09-xxx-xxxx',
+          mobile_number:'0912345678',
           email:'user_4@gmail.com',
           password: 'user1212',
           purchaseHistory:[]
@@ -87,6 +87,9 @@ export const userSlice = createSlice({
     },
     addPurchase(state,action){
       const purchase = action.payload
+      if (!Array.isArray(state.user.purchaseHistory)) {
+        state.user.purchaseHistory = []
+      }
       state.user.purchaseHistory.push(purchase)
       const saveUser = JSON.stringify(state.user)
       sessionStorage.setItem('User',saveUser)

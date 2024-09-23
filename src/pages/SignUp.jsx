@@ -5,6 +5,7 @@ import { signup } from '../store/userSlice'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { RiErrorWarningFill } from "react-icons/ri";
+import Tooltip from '../components/ToolTip'
 
 function SignUp() {
 
@@ -70,7 +71,6 @@ function SignUp() {
     if(authUser&&isSubmit){navigate('/')}
   },[authUser,navigate,isSubmit])
   
-  console.log(values)
 
   return (
     <div className='grid grid-cols-[1fr_1fr] pb-20 pt-2 px-10 h-full'>
@@ -94,37 +94,62 @@ function SignUp() {
               value={values.name}
               onChange={handleOnChange}
               required
-              className='relative w-full border-b-2 border-gray-300 outline-none focus:outline-none focus:border-black text-md py-2 px-5'/>
+              className='w-full border-b-2 border-gray-300 outline-none focus:outline-none focus:border-black text-md py-2 px-5'/>
+              <span className='absolute top-2 right-2'>
+                <Tooltip text='Name must be between 4 and 10 letters and contain only a-z or A-Z.'>
+                  <RiErrorWarningFill size={20} className='text-gray-500'/>
+                </Tooltip>
+              </span>
               {errors.name && <p className="text-red-500">{errors.name}</p>}
-              <RiErrorWarningFill size={20} className='absolute top-2 right-2 text-gray-500'/>
           </div>
-          <input 
-            type='text'
-            name='mobile_number'
-            placeholder='Mobile Number'
-            value={values.mobile_number}
-            onChange={handleOnChange}
-            required
-            className='w-full border-b-2 border-gray-300 outline-none focus:outline-none focus:border-black text-md py-2 px-5'/>
-            {errors.mobile_number && <p className="text-red-500">{errors.mobile_number}</p>}
-          <input 
-            type='email'
-            name='email'
-            placeholder='Email'
-            value={values.email}
-            onChange={handleOnChange}
-            required
-            className='w-full border-b-2 border-gray-300 outline-none focus:outline-none focus:border-black text-md py-2 px-5'/>
-            {errors.email && <p className="text-red-500">{errors.email}</p>}
-          <input 
-            type='password'
-            name='password'
-            placeholder='Password'
-            value={values.password}
-            onChange={handleOnChange}
-            required
-            className='w-full border-b-2 border-gray-300 outline-none focus:outline-none focus:border-black text-md py-2 px-5'/>
-            {errors.password && <p className="text-red-500">{errors.password}</p>}
+          <div className='relative'>
+            <input 
+              type='text'
+              name='mobile_number'
+              placeholder='Mobile Number'
+              value={values.mobile_number}
+              onChange={handleOnChange}
+              required
+              className='w-full border-b-2 border-gray-300 outline-none focus:outline-none focus:border-black text-md py-2 px-5'/>
+              <span className='absolute top-2 right-2'>
+                <Tooltip text='Mobile number must start with 06, 08, or 09 followed by 8 digits.'>
+                  <RiErrorWarningFill size={20} className='text-gray-500'/>
+                </Tooltip>
+              </span>
+              {errors.mobile_number && <p className="text-red-500">{errors.mobile_number}</p>}
+          </div>
+          <div className='relative'>
+            <input 
+              type='email'
+              name='email'
+              placeholder='Email'
+              value={values.email}
+              onChange={handleOnChange}
+              required
+              className='w-full border-b-2 border-gray-300 outline-none focus:outline-none focus:border-black text-md py-2 px-5'/>
+              <span className='absolute top-2 right-2'>
+                <Tooltip text='Email must be in a valid format, e.g., example@example.com'>
+                  <RiErrorWarningFill size={20} className='text-gray-500'/>
+                </Tooltip>
+              </span>
+              {errors.email && <p className="text-red-500">{errors.email}</p>}
+          </div>
+          <div className='relative'>
+            <input 
+              type='password'
+              name='password'
+              placeholder='Password'
+              value={values.password}
+              onChange={handleOnChange}
+              required
+              className='w-full border-b-2 border-gray-300 outline-none focus:outline-none focus:border-black text-md py-2 px-5'/>
+              <span className='absolute top-2 right-2'>
+                <Tooltip text='Password must be between 4 and 10 characters long and include both letters and numbers.'>
+                  <RiErrorWarningFill size={20} className='text-gray-500'/>
+                </Tooltip>
+              </span>
+              {errors.password && <p className="text-red-500">{errors.password}</p>}
+          </div>
         </div>
         {authError && <p className='w-full text-center text-red-500 font-medium bg-red-100 p-3 my-5'>{authError}</p>}
         <button

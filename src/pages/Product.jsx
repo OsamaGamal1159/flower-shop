@@ -9,7 +9,7 @@ function Product() {
       <div className='pb-10'>
         <Category/>
       </div>
-      <div className='pb-40'>
+      <div className='pb-20'>
         <ProductCard/>
       </div>
     </div>

@@ -48,11 +48,10 @@ function Cart() {
     dispatch(clearCart())
 
     alert('Purchase Successful!')
-    console.log(purchase)
   }
   
   return (
-    <div className='pb-40 text-gray-700'>
+    <div className='mb-20 text-gray-700'>
       <h3 className='text-gray-700 text-3xl font-bold leading-9'>My Cart</h3>
       <hr className='w-[90px] h-[5px] bg-red-400 border-none my-4 mb-4'/>
         {/*------------------------------------------Cart List-------------------------------------*/}

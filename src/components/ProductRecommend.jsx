@@ -17,7 +17,7 @@ function ProductRecommend() {
     },[dispatch])
     
     useEffect(()=>{
-        dispatch(setRecommend())
+        dispatch(setRecommend(selectedCategory))
     },[dispatch])
 
     function handleOpenModal(id){
@@ -35,7 +35,7 @@ function ProductRecommend() {
         <hr className='w-[90px] h-[5px] bg-red-400 border-none mt-2 mb-10'/>
         <div className="grid grid-cols-5 gap-y-8 place-items-center">
             {recommend.map((item) => {
-                if (selectedCategory==='All' || selectedCategory.toLowerCase() === item.category) {
+                if (selectedCategory==='all' || selectedCategory.toLowerCase() === item.category) {
                   return (
                     <ProductItem key={item.id} id={item.id} name={item.name} img={item.image} price={item.price} handleOpenModal={handleOpenModal}/>
                 )  
