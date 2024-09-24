@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux'
 import ProductItem from './ProductItem'
 import { setFlowers,setRecommend,openModal,closeModal } from '../store/flowersSlice'
 import ProductModal from './ProductModal'
 
 import { IoIosArrowDropright } from "react-icons/io";
-import { Link } from 'react-router-dom';
 
 function ProductRecommend() {
     const dispatch = useDispatch()
@@ -20,10 +20,10 @@ function ProductRecommend() {
         dispatch(setRecommend(selectedCategory))
     },[dispatch])
 
-    function handleOpenModal(id){
+    const handleOpenModal=(id)=>{
         dispatch(openModal(id))
     }
-    function handleCloseModal(){
+    const handleCloseModal=()=>{
         dispatch(closeModal());
     }
 
@@ -42,7 +42,7 @@ function ProductRecommend() {
             }})}
         </div>
         <div className='flex justify-center'>
-            <Link to='/product' className='flex gap-4 justify-center items-center py-4 my-5 rounded-2xl  w-[98%] cursor-pointer bg-red-100 hover:bg-red-200 transition-colors duration-200'>
+            <Link to='/product' className='flex gap-4 justify-center items-center py-4 my-5 rounded-2xl w-[98%] cursor-pointer bg-red-100 hover:bg-red-200 transition-colors duration-200'>
                 <p className='text-xl font-medium text-red-500'>View All Products</p>
                 <IoIosArrowDropright 
                     size={30}

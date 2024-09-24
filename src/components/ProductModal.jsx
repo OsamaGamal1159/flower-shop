@@ -36,7 +36,6 @@ function ProductModal({handleCloseModal}) {
                 </div>
             </div>
         </div>
-      
     )
   }
 

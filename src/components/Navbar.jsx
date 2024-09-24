@@ -21,12 +21,11 @@ function Navbar() {
         navigate('/')
     }
 
-    
   return (
     <div className='relative flex items-center justify-between text-base font-medium pb-10 z-50'>
-        {/* ----------------------------------------Logo----------------------------------------------- */}
+        {/* -----------------------------------Logo-------------------------------------- */}
         <Link to='/' className='text-5xl text-red-500 italic parisienne-regular'>De Flore.</Link>
-        {/* ----------------------------------------NavLink----------------------------------------------- */}
+        {/* ----------------------------------NavLink------------------------------------- */}
         <ul className='hidden sm:flex gap-6 text-md text-gray-800'>
             <NavLink to='/' className='flex flex-col items-center gap-1 hover:text-red-500 transition-colors duration-200'>
                 <p>Home</p>
@@ -45,17 +44,16 @@ function Navbar() {
                 <hr className='w-3/4 h-[3px] bg-red-500 hidden'/>
             </NavLink>
         </ul>
-        {/* ---------------------------------Greeting----------------------------------------- */}
+        {/* -------------------------------Greeting--------------------------------------- */}
         <div className='flex gap-2 items-center'>
             {authUser?<p className='text-red-500 font-medium pr-5 flex items-center gap-3'>Hi! {name.slice(0,5)}<span><MdOutlineWavingHand/></span></p>:''}
-
-            {/* ---------------------------------Search----------------------------------------- */}
+            {/* -------------------------------Search------------------------------------- */}
             <div className='cursor-pointer hover:bg-red-400 rounded-full p-2 transition-colors duration-200 group'>
                 <BiSearchAlt
                     size={25} 
                     className='text-gray-800 group-hover:text-white'/>
             </div>
-            {/* -----------------------------------Cart------------------------------------------ */}
+            {/* --------------------------------Cart-------------------------------------- */}
             <Link to='/cart' className='relative cursor-pointer hover:bg-red-400 rounded-full p-3 transition-colors duration-200 group'>
                 <FiShoppingCart
                     size={20}
@@ -63,7 +61,6 @@ function Navbar() {
                 {totalAmount?(
                     <div className='absolute bg-red-500 w-4 h-4 right-[6px] top-[4px] rounded-full text-white text-[10px] text-center leading-4'>{totalAmount}</div>
                 ):('')}
-                
             </Link>
             {/* ----------------------------------Login----------------------------------------- */}
             {authUser?(
@@ -88,7 +85,6 @@ function Navbar() {
                         className='text-black group-hover:text-white'/>
                 </Link>
             )}
-            
         </div>
     </div>
   )

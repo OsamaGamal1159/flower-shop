@@ -3,7 +3,6 @@ import React from 'react'
 import bg_about_1 from '../assets/about/about-img-1.jpg'
 import bg_about_2 from '../assets/about/about-img-2.jpg'
 import bg_about_3 from '../assets/about/about-img-3.jpg'
-
 import { GiButterflyFlower } from "react-icons/gi";
 import { GiFlowerPot } from "react-icons/gi";
 import { TbHandClick } from "react-icons/tb";

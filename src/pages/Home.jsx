@@ -43,7 +43,7 @@ function Home() {
           </div>
           {/* text-content */}
           <div className='absolute top-[20%] left-[5%] flex flex-col items-start gap-2 w-1/4'>
-            <p className=' text-md font-medium text-white pb-3'>More Happy Time</p>
+            <p className=' text-lg font-medium text-red-300 pb-3'>More Happy Time</p>
             <h1 className='prata-regular text-4xl font-bold text-red-400'>The Beauty and Charm of a Flower Bouquet</h1>
             <hr className='w-1/5 h-[5px] bg-red-400 border-none my-5 '/>
             <p className='text-sm text-white pb-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt itaque ratione vel saepe culpa eveniet ab officiis molestiae odit sequi!</p>
@@ -63,7 +63,7 @@ function Home() {
           </div>
           {/* text-content */}
           <div className='absolute top-[20%] left-[5%] flex flex-col items-start gap-2 w-1/4'>
-            <p className=' text-md font-medium text-white pb-3'>More Happy Time</p>
+            <p className=' text-lg font-medium text-white pb-3'>More Happy Time</p>
             <h1 className='prata-regular text-4xl font-bold text-red-400'>The Beauty and Charm of a Flower Bouquet</h1>
             <hr className='w-1/5 h-[5px] bg-red-400 border-none my-5'/>
             <p className='text-sm text-white pb-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt itaque ratione vel saepe culpa eveniet ab officiis molestiae odit sequi!</p>
@@ -83,12 +83,12 @@ function Home() {
           </div>
           {/* text-content */}
           <div className='absolute top-[20%] left-[5%] flex flex-col items-start gap-2 w-1/4'>
-            <p className=' text-md font-medium text-white pb-3'>More Happy Time</p>
-            <h1 className='prata-regular text-4xl font-bold text-red-400'>The Beauty and Charm of a Flower Bouquet</h1>
-            <hr className='w-1/5 h-[5px] bg-red-400 border-none my-5'/>
-            <p className='text-sm text-white pb-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt itaque ratione vel saepe culpa eveniet ab officiis molestiae odit sequi!</p>
+            <p className=' text-lg font-medium text-gray-500 pb-3'>More Happy Time</p>
+            <h1 className='prata-regular text-4xl font-bold text-gray-700'>The Beauty and Charm of a Flower Bouquet</h1>
+            <hr className='w-1/5 h-[5px] bg-gray-700 border-none my-5'/>
+            <p className='text-sm text-gray-500 pb-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt itaque ratione vel saepe culpa eveniet ab officiis molestiae odit sequi!</p>
             <Link to='/product'>
-              <button className='bg-red-400 px-7 py-2 text-white font-medium hover:scale-110 transition duration-200'>Shop Now</button>
+              <button className='bg-gray-800 px-7 py-2 text-white font-medium hover:scale-110 transition duration-200'>Shop Now</button>
             </Link>
           </div>
         </SwiperSlide>
@@ -103,12 +103,12 @@ function Home() {
           </div>
           {/* text-content */}
           <div className='absolute top-[20%] left-[5%] flex flex-col items-start gap-2 w-1/4'>
-            <p className=' text-md font-medium text-white pb-3'>More Happy Time</p>
-            <h1 className='prata-regular text-4xl font-bold text-red-400'>The Beauty and Charm of a Flower Bouquet</h1>
-            <hr className='w-1/5 h-[5px] bg-red-400 border-none my-5'/>
+            <p className=' text-lg font-medium text-white pb-3'>More Happy Time</p>
+            <h1 className='prata-regular text-4xl font-bold text-lime-800'>The Beauty and Charm of a Flower Bouquet</h1>
+            <hr className='w-1/5 h-[5px] bg-lime-700 border-none my-5'/>
             <p className='text-sm text-white pb-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt itaque ratione vel saepe culpa eveniet ab officiis molestiae odit sequi!</p>
             <Link to='/product'>
-              <button className='bg-red-400 px-7 py-2 text-white font-medium hover:scale-110 transition duration-200'>Shop Now</button>
+              <button className='bg-lime-800 px-7 py-2 text-white font-medium hover:scale-110 transition duration-200'>Shop Now</button>
             </Link>
           </div>
         </SwiperSlide>

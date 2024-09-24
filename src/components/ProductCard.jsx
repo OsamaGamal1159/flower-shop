@@ -13,10 +13,10 @@ function ProductCard() {
         dispatch(setFlowers())
     },[dispatch])
 
-    function handleOpenModal(id){
+    const handleOpenModal=(id)=>{
         dispatch(openModal(id))
     }
-    function handleCloseModal(){
+    const handleCloseModal=()=>{
         dispatch(closeModal())
     }
 

@@ -71,7 +71,6 @@ function SignUp() {
     if(authUser&&isSubmit){navigate('/')}
   },[authUser,navigate,isSubmit])
   
-
   return (
     <div className='grid grid-cols-[1fr_1fr] pb-20 pt-2 px-10 h-full'>
       <div className='relative w-full h-full bg-cover bg-center bg-no-repeat bg-red-300'

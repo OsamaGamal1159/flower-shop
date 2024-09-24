@@ -17,21 +17,21 @@ export const userSlice = createSlice({
   initialState,
   reducers: {
     signup (state,action){
-        const userId = action.payload
-        const nameValidation = /^[A-Za-z]{4,10}$/i.test(userId.name)
-        const mobileValidation = /^(06|08|09)\d{8}$/.test(userId.mobile_number)
-        const emailValidation = /^\S+@\S+\.\S+$/.test(userId.email)
-        const passwordValidation = /^(?=.*[0-9])(?=.*[a-zA-Z])[a-zA-Z0-9]{4,10}$/i.test(userId.password)
-        state.user=userId
-        if(!nameValidation || !mobileValidation || !emailValidation || !passwordValidation){
-            state.user.authUser = false
-            state.error='Name, Mobile Number,Email or Password is Fail. Please try again.'
-        } else {
-            state.user.authUser = true
-            const saveUser = JSON.stringify(userId)
-            sessionStorage.setItem('User',saveUser)
-            state.error=null
-        }
+      const userId = action.payload
+      const nameValidation = /^[A-Za-z]{4,10}$/i.test(userId.name)
+      const mobileValidation = /^(06|08|09)\d{8}$/.test(userId.mobile_number)
+      const emailValidation = /^\S+@\S+\.\S+$/.test(userId.email)
+      const passwordValidation = /^(?=.*[0-9])(?=.*[a-zA-Z])[a-zA-Z0-9]{4,10}$/i.test(userId.password)
+      state.user=userId
+      if(!nameValidation || !mobileValidation || !emailValidation || !passwordValidation){
+          state.user.authUser = false
+          state.error='Name, Mobile Number,Email or Password is Fail. Please try again.'
+      } else {
+          state.user.authUser = true
+          const saveUser = JSON.stringify(userId)
+          sessionStorage.setItem('User',saveUser)
+          state.error=null
+      }
     },
     login(state,action){
       const userId = action.payload

@@ -59,7 +59,7 @@ function Login() {
           <div className='absolute top-0 left-0 w-full h-full bg-gray-200 opacity-20'></div>
             
       </div>
-      {/* ----------------------------------------------Login side----------------------------------------------- */}
+      {/* -------------------------------Login side--------------------------------- */}
       <div className='flex flex-col justify-center items-center px-20 text-gray-800'>
         <div className='flex flex-col items-start gap-2 w-full pb-10'>
           <h3 className='text-3xl font-bold'>Login</h3>

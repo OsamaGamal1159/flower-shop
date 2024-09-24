@@ -10,7 +10,7 @@ function ProductItem({id,name,img,price,handleOpenModal}) {
 
     const itemInCart = cartItem.find((item)=>item.id===id)
 
-    function handleAddToCart(){
+    const handleAddToCart=()=>{
         dispatch(addToCart({
             id: id,
             name: name,
@@ -21,7 +21,7 @@ function ProductItem({id,name,img,price,handleOpenModal}) {
         }))
     }
 
-    function handleRemoveFromCart(){
+    const handleRemoveFromCart=()=>{
         dispatch(removeFromCart({
             id: id,
             name: name,

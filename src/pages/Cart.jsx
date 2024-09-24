@@ -43,10 +43,8 @@ function Cart() {
       totalAmount: totalAmount,
       totalPrice: totalPrice
     }
-
     dispatch(addPurchase(purchase))
     dispatch(clearCart())
-
     alert('Purchase Successful!')
   }
   
@@ -54,7 +52,7 @@ function Cart() {
     <div className='mb-20 text-gray-700'>
       <h3 className='text-gray-700 text-3xl font-bold leading-9'>My Cart</h3>
       <hr className='w-[90px] h-[5px] bg-red-400 border-none my-4 mb-4'/>
-        {/*------------------------------------------Cart List-------------------------------------*/}
+        {/*----------------------------------Cart List----------------------------*/}
         {cart.length===0 ?(
           <div className='text-center flex items-center justify-center mt-16'>
             <div 
@@ -107,7 +105,7 @@ function Cart() {
                   )
                 })}
               </div>
-              {/*----------------------------------Bill---------------------------------*/}
+              {/*-------------------------------Bill------------------------------*/}
               <div className='bg-white shadow-category rounded-xl w-[400px] min-h-[400px] h-[450px] flex flex-col gap-3 px-8'>
                 <h3 className='text-3xl font-bold text-center pt-8 pb-5'>Total Charge</h3>
                 <p className='text-lg font-bold'>Item : <span>{totalAmount}</span></p>
