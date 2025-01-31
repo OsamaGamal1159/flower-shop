@@ -21,11 +21,16 @@ function ProductModal({ handleCloseModal }) {
           Detail Product
         </h1>
         <hr className="w-20 h-1 bg-red-400 border-none my-3 mx-auto" />
-        <div className="flex flex-col md:flex-row items-center gap-5">
+
+        {/* محتوى المنتج */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* صورة المنتج */}
           <div
-            className="w-full max-w-[250px] h-[250px] bg-cover bg-center rounded-lg"
+            className="w-full h-[250px] sm:h-[300px] bg-cover bg-center rounded-lg"
             style={{ backgroundImage: `url(${selectedFlower.image})` }}
           ></div>
+
+          {/* تفاصيل المنتج */}
           <div className="flex flex-col gap-3 text-center md:text-left">
             <p className="text-lg md:text-xl font-bold text-gray-700">
               {selectedFlower.name}
