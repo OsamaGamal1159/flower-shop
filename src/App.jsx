@@ -15,10 +15,10 @@ function App() {
     <div className="min-h-screen h-screen py-10 px-20">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/product" element={<Product />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/products" element={<Product />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contactus" element={<Contact />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/orders" element={<Orders />} />
       </Routes>

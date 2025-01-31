@@ -12,30 +12,31 @@ import { RiCustomerServiceLine } from "react-icons/ri";
 function About() {
   return (
     <div className="mb-20 text-gray-800">
-      <div className="grid grid-cols-2 gap-4 mb-12">
+      {/* Adjusting the image grid for mobile responsiveness */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
         <div
-          className="w-full h-[520px] bg-cover bg-center bg-no-repeat bg-red-300"
+          className="w-full h-[300px] sm:h-[520px] bg-cover bg-center bg-no-repeat bg-red-300"
           style={{ backgroundImage: `url(${bg_about_1})` }}
         ></div>
         <div className="grid grid-rows-2 gap-4">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div
-              className="w-full h-full bg-cover bg-center bg-no-repeat bg-red-300"
+              className="w-full h-[250px] sm:h-full bg-cover bg-center bg-no-repeat bg-red-300"
               style={{ backgroundImage: `url(${bg_about_2})` }}
             ></div>
             <div
-              className="w-full h-full bg-cover bg-center bg-no-repeat bg-red-300"
+              className="w-full h-[250px] sm:h-full bg-cover bg-center bg-no-repeat bg-red-300"
               style={{ backgroundImage: `url(${bg_about_3})` }}
             ></div>
           </div>
-          <h3 className="text-red-400 text-8xl font-bold leading-9 flex justify-center items-center bg-red-100 lobster-regular">
+          <h3 className="text-red-400 text-4xl sm:text-8xl font-bold leading-9 flex justify-center items-center bg-red-100 lobster-regular">
             About Me.
           </h3>
         </div>
       </div>
       <div className="text-lg py-8 px-7 leading-9 bg-red-100 mb-10">
         <p>
-          <span className="text-3xl font-bold text-red-400">
+          <span className="text-2xl sm:text-3xl font-bold text-red-400">
             At Ahmed Flowers,
           </span>{" "}
           We believe that flowers are more than just decorations - they are
@@ -45,9 +46,10 @@ function About() {
           truly spectacular.
         </p>
       </div>
-      <div className="px-5 text-2xl font-bold">Why Choose Us?</div>
+      <div className="px-5 text-xl sm:text-2xl font-bold">Why Choose Us?</div>
       <hr className="w-[90px] h-[5px] bg-red-400 border-none my-4 mb-4 ml-5" />
-      <div className="grid grid-cols-5 divide-x-2 divide-gray-200 text-sm">
+      {/* Adjusting the grid for mobile responsiveness */}
+      <div className="grid grid-cols-1 sm:grid-cols-5 divide-x-2 divide-gray-200 text-sm sm:text-base">
         <div className="flex flex-col gap-4 p-4">
           <div className="flex gap-2 items-end">
             <h4 className="font-medium text-lg">Freshness Guaranteed</h4>
@@ -107,7 +109,7 @@ function About() {
       </div>
       <div className="text-lg py-8 px-7 leading-9 bg-red-100 mt-10">
         <p>
-          <span className="text-3xl font-bold text-red-400">
+          <span className="text-2xl sm:text-3xl font-bold text-red-400">
             We are more than just a flower shop,
           </span>{" "}
           we are your trusted partner for all life's moments, big and small.
