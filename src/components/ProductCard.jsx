@@ -28,21 +28,23 @@ function ProductCard() {
         Choose your flower
       </h3>
       <hr className="w-[90px] h-[5px] bg-red-400 border-none mt-2 mb-10" />
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 place-items-center">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 place-items-center">
         {flowers.map((item) => {
           if (
             selectedCategory === "all" ||
             selectedCategory.toLowerCase() === item.category
           ) {
             return (
-              <ProductItem
-                key={item.id}
-                id={item.id}
-                name={item.name}
-                img={item.image}
-                price={item.price}
-                handleOpenModal={handleOpenModal}
-              />
+              <div className="w-[140px] sm:w-[160px] md:w-[180px] lg:w-[200px] p-2">
+                <ProductItem
+                  key={item.id}
+                  id={item.id}
+                  name={item.name}
+                  img={item.image}
+                  price={item.price}
+                  handleOpenModal={handleOpenModal}
+                />
+              </div>
             );
           }
         })}

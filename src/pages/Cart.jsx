@@ -156,7 +156,7 @@ function Cart() {
               the fresh flowers and make it happy.
             </p>
             <Link
-              to="/product"
+              to="/products"
               className="bg-red-500 text-white text-xl font-bold px-10 py-4 rounded-lg hover:scale-105 duration-100"
             >
               Continue Shopping
@@ -176,47 +176,54 @@ function Cart() {
               return (
                 <div
                   key={index}
-                  className="grid grid-cols-[1fr_4fr_2fr_1fr] bg-stone-100 p-5"
+                  className="grid grid-cols-[1fr_3fr_2fr_1fr] gap-4 bg-stone-100 p-4 rounded-md"
                 >
+                  {/* Image */}
                   <div
-                    className="w-[70px] h-[70px] bg-cover bg-center bg-no-repeat bg-red-300"
+                    className="w-[80px] h-[80px] bg-cover bg-center bg-no-repeat rounded-md"
                     style={{
                       backgroundImage: `url(${
                         localStorage.getItem(`image_${item.id}`) || item.img
                       })`,
                     }}
                   ></div>
-                  <div className="flex flex-col justify-center gap-1">
-                    <p className="text-lg font-medium">{item.name}</p>
-                    <div className="flex gap-4 text-xs">
+
+                  {/* Product Details */}
+                  <div className="flex flex-col justify-center gap-2">
+                    <p className="text-base font-semibold">{item.name}</p>
+                    <div className="flex gap-3 text-sm text-gray-600">
                       <p>X {item.amount}</p>
                       <div
-                        className="underline underline-offset-4 font-medium cursor-pointer"
+                        className="underline underline-offset-4 font-medium cursor-pointer text-red-500"
                         onClick={() => handleDeleteFromCart(item)}
                       >
                         Remove
                       </div>
                     </div>
                   </div>
+
+                  {/* Quantity Control */}
                   <div className="flex justify-center items-center">
-                    <div className=" flex justify-center items-center gap-4 bg-transparent border-solid border-[1px] border-gray-500 px-5 py-2 rounded-md">
+                    <div className="flex justify-center items-center gap-3 bg-transparent border-[1px] border-gray-500 px-4 py-2 rounded-md">
                       <div
-                        className="cursor-pointer text-xl font-medium px-2"
+                        className="cursor-pointer text-2xl font-medium px-3"
                         onClick={() => handleRemoveFromCart(item)}
                       >
                         -
                       </div>
-                      <p className="text-md font-medium">{item.amount}</p>
+                      <p className="text-lg font-medium">{item.amount}</p>
                       <div
-                        className="cursor-pointer text-xl font-medium px-2"
+                        className="cursor-pointer text-2xl font-medium px-3"
                         onClick={() => handleAddToCart(item)}
                       >
                         +
                       </div>
                     </div>
                   </div>
+
+                  {/* Price */}
                   <div className="flex justify-center items-center">
-                    <p className="text-xl font-bold">
+                    <p className="text-lg font-semibold text-red-600">
                       $ {item.amount * item.price}
                     </p>
                   </div>
@@ -231,14 +238,14 @@ function Cart() {
           >
             <label className="flex flex-col">
               <span className="text-3xl font-bold text-center pt-8 pb-5">
-                ادخل بياناتك
+                Enter Your Information{" "}
               </span>
               <input
                 type="text"
                 name="name"
                 value={form.name}
                 onChange={handleChange}
-                placeholder="اسم صاحب الاوردر؟"
+                placeholder="Enter Your Name ?  "
                 className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
                 style={{ color: "#000" }}
               />
@@ -253,7 +260,7 @@ function Cart() {
                 name="address"
                 value={form.address}
                 onChange={handleChange}
-                placeholder="العنوان؟"
+                placeholder="address ?"
                 className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
                 style={{ color: "#000" }}
               />
@@ -268,7 +275,7 @@ function Cart() {
                 name="phone"
                 value={form.phone}
                 onChange={handleChange}
-                placeholder="رقم التليفون؟"
+                placeholder=" Phone number?"
                 className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
                 style={{ color: "#000" }}
               />
@@ -282,7 +289,7 @@ function Cart() {
                 name="message"
                 value={form.message}
                 onChange={handleChange}
-                placeholder="اكتب رسالة مع الورود؟"
+                placeholder="Write a message with the flowers?"
                 className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
                 style={{ color: "#000" }}
               ></textarea>
@@ -295,14 +302,14 @@ function Cart() {
                 checked={form.wantsChocolate}
                 onChange={handleChange}
               />
-              <span className="text-md">هل ترغب في شوكولاتة؟</span>
+              <span className="text-md"> Would you like some chocolate? </span>
             </label>
 
             <button
               type="submit"
               className="flex justify-between text-xl font-bold text-white bg-red-500 w-full rounded-xl px-5 py-3 mt-4 hover:bg-red-600 transition-colors duration-100"
             >
-              {loading ? "...يتم الارسال " : "طلب اوردر"}
+              {loading ? "...sending " : "Place Order"}
             </button>
           </form>
         </div>

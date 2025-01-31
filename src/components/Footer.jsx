@@ -17,7 +17,7 @@ function Footer() {
         </div>
         <div className="flex justify-center md:justify-end gap-6 mt-4 md:mt-0">
           <a
-            href="https://wa.me/yourwhatsappnumber"
+            href="https://wa.me/01030152903"
             target="_blank"
             rel="noopener noreferrer"
             className="text-green-500 text-3xl hover:text-green-600 transition-colors"
@@ -25,7 +25,7 @@ function Footer() {
             <FaWhatsapp />
           </a>
           <a
-            href="https://facebook.com/yourfacebookprofile"
+            href="https://www.facebook.com/profile.php?id=100077411983407&mibextid=ZbWKwL"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 text-3xl hover:text-blue-700 transition-colors"

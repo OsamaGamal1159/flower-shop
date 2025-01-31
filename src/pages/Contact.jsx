@@ -16,11 +16,12 @@ function Contact() {
           <div className="flex flex-col gap-4">
             <h3 className="text-xl font-medium">Our Store</h3>
             <p>
-              123 Floral Avenue,
+              250 Street,
               <br />
-              Rosewood District,
+              Maadi, Degla Square,
               <br />
-              Garden City, GC 45678
+              near Thakanat El Maadi Metro Station, in front of Crédit Agricole
+              Egypt Bank.
             </p>
             <p>
               Tel: ⁦+20 10 30152903⁩
