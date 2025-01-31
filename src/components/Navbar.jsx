@@ -14,16 +14,7 @@ function Navbar() {
   return (
     <nav className="relative flex items-center justify-between p-4 bg-white shadow-md w-full z-50">
       {/* Logo */}
-      {/* <Link
-        to="/"
-        className="text-3xl md:text-5xl text-red-500 italic font-semibold"
-      >
-        Ahmed Flowers
-      </Link> */}
-      <Link
-        to="/home"
-        className="text-5xl text-red-500 italic parisienne-regular"
-      >
+      <Link to="/" className="text-5xl text-red-500 italic parisienne-regular">
         Ahmed Flowers
       </Link>
 
@@ -44,7 +35,11 @@ function Navbar() {
         {["Home", "Products", "About", "Contact Us"].map((item, index) => (
           <NavLink
             key={index}
-            to={`/${item.toLowerCase().replace(" ", "")}`}
+            to={
+              item.toLowerCase() === "home"
+                ? "/"
+                : `/${item.toLowerCase().replace(" ", "")}`
+            }
             className="block sm:inline-flex flex-col items-center gap-1 py-2 px-4 hover:text-red-500 transition-colors duration-200"
           >
             <p>{item}</p>

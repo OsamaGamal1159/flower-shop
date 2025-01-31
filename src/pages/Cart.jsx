@@ -224,7 +224,7 @@ function Cart() {
                   {/* Price */}
                   <div className="flex justify-center items-center">
                     <p className="text-lg font-semibold text-red-600">
-                      $ {item.amount * item.price}
+                      {item.amount * item.price} EGP
                     </p>
                   </div>
                 </div>

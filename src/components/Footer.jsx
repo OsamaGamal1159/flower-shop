@@ -17,7 +17,7 @@ function Footer() {
         </div>
         <div className="flex justify-center md:justify-end gap-6 mt-4 md:mt-0">
           <a
-            href="https://wa.me/01030152903"
+            href="https://wa.me/+20 10 30152903"
             target="_blank"
             rel="noopener noreferrer"
             className="text-green-500 text-3xl hover:text-green-600 transition-colors"

@@ -15,7 +15,7 @@ function App() {
     <div className="min-h-screen w-full px-4 sm:px-6 md:px-10 lg:px-20 py-6 sm:py-8 md:py-10">
       <Navbar />
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/products" element={<Product />} />
         <Route path="/about" element={<About />} />
         <Route path="/contactus" element={<Contact />} />
