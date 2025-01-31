@@ -55,7 +55,7 @@ function Orders() {
                 </div>
                 <div className='flex flex-col bg-stone-100 items-end text-lg font-medium px-10 pb-4'>
                   <p>Item : {purchaseItem.totalAmount}</p>
-                  <p>Total Price : $ {purchaseItem.totalPrice}</p>
+                  <p>Total Price :  {purchaseItem.totalPrice} EGP</p>
                 </div>
               </div>
             )})}

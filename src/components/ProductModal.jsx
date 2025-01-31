@@ -10,7 +10,7 @@ function ProductModal({ handleCloseModal }) {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 px-4">
-      <div className="relative flex flex-col bg-white w-full max-w-2xl md:max-w-3xl lg:max-w-4xl p-5 rounded-lg shadow-lg">
+      <div className="relative flex flex-col bg-white w-full max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-4xl p-5 rounded-lg shadow-lg">
         <button
           className="absolute top-4 right-4 text-gray-700 hover:text-red-500"
           onClick={handleCloseModal}
@@ -39,7 +39,7 @@ function ProductModal({ handleCloseModal }) {
               {selectedFlower.details}
             </p>
             <p className="text-lg md:text-2xl font-bold text-red-500 bg-red-100 p-3 rounded-lg">
-              Price: ${selectedFlower.price}
+              Price: {selectedFlower.price} EGP
             </p>
           </div>
         </div>
