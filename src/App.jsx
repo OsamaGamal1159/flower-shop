@@ -12,10 +12,10 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen h-screen py-10 px-20">
+    <div className="min-h-screen h-screen px-4 sm:px-6 md:px-10 lg:px-20 py-6 sm:py-8 md:py-10 w-full">
       <Navbar />
       <Routes>
-        <Route path="/Home" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/products" element={<Product />} />
         <Route path="/about" element={<About />} />
         <Route path="/contactus" element={<Contact />} />

@@ -18,13 +18,17 @@ function ProductRecommend() {
   );
   const recommend = useSelector((state) => state.flowers.recommend);
 
+  // تحميل بيانات المنتجات عند فتح الصفحة
   useEffect(() => {
     dispatch(setFlowers());
   }, [dispatch]);
 
+  // تحديث التوصيات بناءً على الفئة المختارة بعد تحميل البيانات
   useEffect(() => {
-    dispatch(setRecommend(selectedCategory));
-  }, [dispatch, selectedCategory]);
+    if (recommend.length === 0) {
+      dispatch(setRecommend(selectedCategory));
+    }
+  }, [dispatch, selectedCategory, recommend.length]);
 
   const handleOpenModal = (id) => {
     dispatch(openModal(id));
@@ -58,7 +62,7 @@ function ProductRecommend() {
       </div>
       <div className="flex justify-center mt-6">
         <Link
-          to="/product"
+          to="/products"
           className="flex gap-2 md:gap-4 justify-center items-center py-3 md:py-4 px-6 rounded-xl w-full md:w-[60%] bg-red-100 hover:bg-red-200 transition-colors duration-200"
         >
           <p className="text-lg md:text-xl font-medium text-red-500">

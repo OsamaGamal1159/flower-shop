@@ -45,15 +45,16 @@ function Home() {
           {/* text-content */}
           <div className="absolute top-[20%] left-[5%] flex flex-col items-start gap-2 w-1/4">
             <p className=" text-lg font-medium text-red-300 pb-3">
-              More Happy Time{" "}
+              More Happy Time
             </p>
             <h1 className="prata-regular text-4xl font-bold text-red-400">
               The Beauty and Charm of a Flower Bouquet
             </h1>
             <hr className="w-1/5 h-[5px] bg-red-400 border-none my-5 " />
             <p className="text-sm text-white pb-5">
-              Express your love and emotions through the beauty of handpicked
-              blooms
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+              itaque ratione vel saepe culpa eveniet ab officiis molestiae odit
+              sequi!
             </p>
             <Link to="/product">
               <button className="bg-red-400 px-7 py-2 text-white font-medium hover:scale-110 transition duration-200">
@@ -82,8 +83,9 @@ function Home() {
             </h1>
             <hr className="w-1/5 h-[5px] bg-red-400 border-none my-5" />
             <p className="text-sm text-white pb-5">
-              Brighten someone's day with our stunning collection of fresh
-              flowers
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+              itaque ratione vel saepe culpa eveniet ab officiis molestiae odit
+              sequi!
             </p>
             <Link to="/product">
               <button className="bg-red-400 px-7 py-2 text-white font-medium hover:scale-110 transition duration-200">
@@ -112,8 +114,9 @@ function Home() {
             </h1>
             <hr className="w-1/5 h-[5px] bg-gray-700 border-none my-5" />
             <p className="text-sm text-gray-500 pb-5">
-              From elegant bouquets to unique arrangements, we deliver flowers
-              that speak from the heart
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+              itaque ratione vel saepe culpa eveniet ab officiis molestiae odit
+              sequi!
             </p>
             <Link to="/product">
               <button className="bg-gray-800 px-7 py-2 text-white font-medium hover:scale-110 transition duration-200">
@@ -142,8 +145,9 @@ function Home() {
             </h1>
             <hr className="w-1/5 h-[5px] bg-lime-700 border-none my-5" />
             <p className="text-sm text-white pb-5">
-              Send a smile today – our flowers are carefully selected to make
-              every moment special
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+              itaque ratione vel saepe culpa eveniet ab officiis molestiae odit
+              sequi!
             </p>
             <Link to="/product">
               <button className="bg-lime-800 px-7 py-2 text-white font-medium hover:scale-110 transition duration-200">

@@ -12,27 +12,27 @@ export const flowersSlice = createSlice({
   name: "flowers",
   initialState,
   reducers: {
-    setRecommend(state, action) {
-      const category = action.payload;
-      if (category && category.toLowerCase() !== "all") {
-        state.recommend = state.flowers
-          .filter(
-            (flower) => flower.category.toLowerCase() === category.toLowerCase()
-          )
-          .slice(0, 10);
-      } else {
-        state.recommend = state.flowers.slice(0, 10);
-      }
-    },
     setFlowers(state) {
       state.flowers = flowers;
     },
+    setRecommend(state, action) {
+      const category = action.payload;
+      if (state.flowers.length === 0) return; // تأكد من وجود بيانات قبل التصفية
+
+      state.recommend =
+        category && category.toLowerCase() !== "all"
+          ? state.flowers
+              .filter(
+                (flower) =>
+                  flower.category.toLowerCase() === category.toLowerCase()
+              )
+              .slice(0, 10)
+          : state.flowers.slice(0, 10);
+    },
     openModal(state, action) {
       state.isModalOpen = true;
-      const flower = state.flowers.find(
-        (flower) => flower.id === action.payload
-      );
-      state.selectedFlower = flower || null;
+      state.selectedFlower =
+        state.flowers.find((flower) => flower.id === action.payload) || null;
     },
     closeModal(state) {
       state.isModalOpen = false;
