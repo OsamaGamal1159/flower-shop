@@ -17,11 +17,12 @@ function Category() {
   };
 
   return (
-    <div className="flex flex-col justify-center">
-      <h3 className="text-gray-700 text-2xl font-bold leading-9"> </h3>Select
-      Category
-      <hr className="w-[90px] h-[5px] bg-red-400 border-none my-4 mb-8" />
-      <div className="flex justify-start gap-6 flex-wrap">
+    <div className="flex flex-col justify-center px-4 md:px-8 lg:px-16">
+      <h3 className="text-gray-700 text-2xl font-bold leading-9 text-center md:text-left">
+        Select Category
+      </h3>
+      <hr className="w-[90px] h-[5px] bg-red-400 border-none my-4 mb-8 mx-auto md:mx-0" />
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 justify-center">
         {category_list.map((item, index) => {
           const isSelected = selectedCategory === item.category_name;
           const isInCart = cartItems[item.category_name];
@@ -29,14 +30,16 @@ function Category() {
             <div
               onClick={() => handleSelectedCategory(item.category_name)}
               key={index}
-              className={
-                "relative w-40 h-40 py-8 px-6 gap-4 bg-red-100 rounded-2xl flex flex-col justify-center items-center reltive cursor-pointer hover:scale-105 duration-200 hover:shadow-category duration-100 ease-linear"
-              }
+              className="relative w-full max-w-[150px] md:max-w-[180px] h-40 py-8 px-4 bg-red-100 rounded-2xl flex flex-col justify-center items-center cursor-pointer hover:scale-105 transition-transform shadow-md"
             >
-              <div className="w-[74px] h-[74px]">
-                <img src={item.category_img} alt={item.category_name} />
+              <div className="w-[64px] h-[64px]">
+                <img
+                  src={item.category_img}
+                  alt={item.category_name}
+                  className="object-cover w-full h-full"
+                />
               </div>
-              <p className="text-md font-semibold text-center text-red-700">
+              <p className="text-sm md:text-md font-semibold text-center text-red-700 mt-2">
                 {item.category_name}
               </p>
               {(isSelected || isInCart) && (
@@ -45,7 +48,7 @@ function Category() {
                   alt="checked_icon"
                   width={21}
                   height={21}
-                  className="absolute top-3 right-3 block"
+                  className="absolute top-3 right-3"
                 />
               )}
             </div>
