@@ -26,8 +26,11 @@ function ProductModal({ handleCloseModal }) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* صورة المنتج */}
           <div
-            className="w-full h-[250px] sm:h-[300px] bg-cover bg-center rounded-lg"
-            style={{ backgroundImage: `url(${selectedFlower.image})` }}
+            className="w-full h-[300px] sm:h-[350px] md:h-[400px] bg-cover bg-center rounded-lg"
+            style={{
+              backgroundImage: `url(${selectedFlower.image})`,
+              objectFit: "cover",
+            }}
           ></div>
 
           {/* تفاصيل المنتج */}
