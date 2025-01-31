@@ -20,7 +20,10 @@ function Navbar() {
       >
         Ahmed Flowers
       </Link> */}
-      <Link to="/" className="text-5xl text-red-500 italic parisienne-regular">
+      <Link
+        to="/Home"
+        className="text-5xl text-red-500 italic parisienne-regular"
+      >
         Ahmed Flowers
       </Link>
 
