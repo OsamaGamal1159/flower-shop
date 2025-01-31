@@ -56,7 +56,7 @@ function Home() {
               itaque ratione vel saepe culpa eveniet ab officiis molestiae odit
               sequi!
             </p>
-            <Link to="/product">
+            <Link to="/products">
               <button className="bg-red-400 px-7 py-2 text-white font-medium hover:scale-110 transition duration-200">
                 Shop Now
               </button>
