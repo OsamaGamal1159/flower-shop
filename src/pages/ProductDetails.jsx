@@ -198,18 +198,21 @@ function ProductDetails() {
         {errors.phone && (
           <span className="text-red-500 text-sm">{errors.phone}</span>
         )}
+        <div className="flex flex-col">
+          <span className="font-semibold text-gray-800">address :</span>
+          <input
+            type="text"
+            name="address"
+            value={form.address}
+            onChange={handleChange}
+            placeholder="Enter your Address.."
+            className="border p-3 rounded-md focus:ring-2 focus:ring-red-500"
+          />
+          {errors.address && (
+            <span className="text-red-500 text-sm">{errors.address}</span>
+          )}
+        </div>
 
-        <input
-          type="text"
-          name="address"
-          value={form.address}
-          onChange={handleChange}
-          placeholder="Enter your Address.."
-          className="border p-3 rounded-md focus:ring-2 focus:ring-red-500"
-        />
-        {errors.address && (
-          <span className="text-red-500 text-sm">{errors.address}</span>
-        )}
         <div className="flex flex-col">
           <span className="font-semibold text-gray-800">
             Send A Message With Flowers :
