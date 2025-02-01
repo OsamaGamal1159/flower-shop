@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../store/cartSlice";
 import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 
 function ProductDetails() {
   const { id } = useParams();
@@ -12,8 +13,7 @@ function ProductDetails() {
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
-    email: "",
-    phone: "",
+    to: "",
     address: "",
     message: "",
     wantsChocolate: false,
@@ -51,7 +51,6 @@ function ProductDetails() {
   const validate = () => {
     const newErrors = {};
     if (!form.name.trim()) newErrors.name = "Name is required.";
-    if (!form.phone.trim()) newErrors.phone = "Phone number is required.";
     if (!form.address.trim()) newErrors.address = "Address is required.";
     return newErrors;
   };
@@ -72,37 +71,58 @@ function ProductDetails() {
         "service_aebdr1n",
         "template_18a32ri",
         {
-          from_name: form.name,
-          cart: `<table>
-  <tr>
-    <th>Name</th>
-    <th>Amount</th>
-    <th>Image</th>
-  </tr>
-  <tr>
-    <td>${product.name}</td>
-    <td>1</td>
-    <td><img src="${window.location.origin}${product.image}" alt="${product.name}" style="max-width: 100px;" /></td>
-  </tr>
-</table>`,
+          cart: `
+  <h2 style="color: #d32f2f;">New Order Received</h2>
+  <p><strong>From:</strong> ${form.name}</p>
+  <p><strong>To:</strong> ${form.to}</p>
+  <p><strong>Address:</strong> ${form.address}</p>
+  <p><strong>Message:</strong> ${form.message}</p>
+  <p><strong>Wants Chocolate:</strong> ${form.wantsChocolate ? "Yes" : "No"}</p>
+  <p><strong>Helium Balloon:</strong> ${
+    form.heliumBalloon || "No Balloon Selected"
+  }</p>
+
+  <h3 style="color: #555;">Product Details</h3>
+  <table style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <tr style="background-color: #f4f4f4; border-bottom: 2px solid #ddd;">
+      <th style="padding: 10px; text-align: left;">Product Name</th>
+      <th style="padding: 10px; text-align: left;">Amount</th>
+      <th style="padding: 10px; text-align: left;">Image</th>
+    </tr>
+    <tr>
+      <td style="padding: 10px;">${product.name}</td>
+      <td style="padding: 10px;">1</td>
+      <td style="padding: 10px;">
+        <img src="${window.location.origin}${product.image}" 
+             alt="${product.name}" 
+             style="max-width: 120px; border-radius: 8px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2);" />
+      </td>
+    </tr>
+  </table>
+`,
           to_name: "Osama",
           from_email: form.email,
           to_email: "osamagamal1611@gmail.com",
-          message: `Phone: ${form.phone}, Address: ${form.address}, Message: ${
-            form.message
-          }, Wants Chocolate: ${
-            form.wantsChocolate ? "Yes" : "No"
-          }, Helium Balloon: ${form.heliumBalloon || "No Balloon Selected"}`,
         },
         "_qcbYCiPrcvMcT0Kp"
       )
       .then(
         () => {
           setLoading(false);
-          alert("Order has been successfully sent.");
+
+          Swal.fire({
+            title: "🎉 Order Placed Successfully!",
+            text: "Your order has been sent. We will contact you soon!",
+            icon: "success",
+            confirmButtonText: "OK",
+            confirmButtonColor: "#d33",
+            background: "#fff",
+            color: "#333",
+          });
+
           setForm({
             name: "",
-            email: "",
+            to: "",
             phone: "",
             address: "",
             message: "",
@@ -146,27 +166,35 @@ function ProductDetails() {
         className="bg-white shadow-lg rounded-xl w-full max-w-md flex flex-col gap-4 p-8"
       >
         <h3 className="text-2xl font-bold text-center">Order This Product</h3>
-
-        <input
-          type="text"
-          name="name"
-          value={form.name}
-          onChange={handleChange}
-          placeholder="Your Name"
-          className="border p-3 rounded-md focus:ring-2 focus:ring-red-500"
-        />
+        <div className="flex flex-col">
+          <span className="font-semibold text-gray-800">
+            From (Name, Mobile):
+          </span>
+          <input
+            type="text"
+            name="name"
+            value={form.name}
+            onChange={handleChange}
+            placeholder="Enter your name and mobile.."
+            className="border p-3 rounded-md focus:ring-2 focus:ring-red-500"
+          />
+        </div>
+        <div className="flex flex-col">
+          <span className="font-semibold text-gray-800">
+            To (Name, Mobile):
+          </span>
+          <input
+            type="text"
+            name="to"
+            value={form.to}
+            onChange={handleChange}
+            placeholder="Enter recipient's name and mobile.."
+            className="border p-3 rounded-md focus:ring-2 focus:ring-red-500"
+          />
+        </div>
         {errors.name && (
           <span className="text-red-500 text-sm">{errors.name}</span>
         )}
-
-        <input
-          type="text"
-          name="phone"
-          value={form.phone}
-          onChange={handleChange}
-          placeholder="Phone Number"
-          className="border p-3 rounded-md focus:ring-2 focus:ring-red-500"
-        />
         {errors.phone && (
           <span className="text-red-500 text-sm">{errors.phone}</span>
         )}
@@ -176,20 +204,24 @@ function ProductDetails() {
           name="address"
           value={form.address}
           onChange={handleChange}
-          placeholder="Address"
+          placeholder="Enter your Address.."
           className="border p-3 rounded-md focus:ring-2 focus:ring-red-500"
         />
         {errors.address && (
           <span className="text-red-500 text-sm">{errors.address}</span>
         )}
-
-        <textarea
-          name="message"
-          value={form.message}
-          onChange={handleChange}
-          placeholder="Message"
-          className="border p-3 rounded-md focus:ring-2 focus:ring-red-500"
-        ></textarea>
+        <div className="flex flex-col">
+          <span className="font-semibold text-gray-800">
+            Send A Message With Flowers :
+          </span>
+          <textarea
+            name="message"
+            value={form.message}
+            onChange={handleChange}
+            placeholder="Enter Your Message.."
+            className="border p-3 rounded-md focus:ring-2 focus:ring-red-500"
+          ></textarea>
+        </div>
 
         <div className="flex flex-col">
           <span className="font-semibold text-gray-800">Chocolates</span>
