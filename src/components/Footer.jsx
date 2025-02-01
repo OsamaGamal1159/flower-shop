@@ -24,6 +24,7 @@ function Footer() {
           >
             <FaWhatsapp />
           </a>
+
           <a
             href="https://www.facebook.com/profile.php?id=100077411983407&mibextid=ZbWKwL"
             target="_blank"

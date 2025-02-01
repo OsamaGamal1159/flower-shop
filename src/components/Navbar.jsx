@@ -57,7 +57,7 @@ function Navbar() {
         )}
 
         {/* Cart */}
-        <Link
+        {/* <Link
           to="/cart"
           className="relative cursor-pointer hover:bg-red-400 rounded-full p-3 transition-colors duration-200 group"
         >
@@ -70,7 +70,7 @@ function Navbar() {
               {totalAmount}
             </div>
           )}
-        </Link>
+        </Link> */}
       </div>
     </nav>
   );

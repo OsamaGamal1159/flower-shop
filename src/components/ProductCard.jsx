@@ -18,6 +18,7 @@ function ProductCard() {
   const handleOpenModal = (id) => {
     dispatch(openModal(id));
   };
+
   const handleCloseModal = () => {
     dispatch(closeModal());
   };
@@ -29,8 +30,8 @@ function ProductCard() {
       </h3>
       <hr className="w-[90px] h-[5px] bg-red-400 border-none mt-2 mb-10 mx-auto" />
 
-      {/* عرض المنتجات في عمودين فقط على شاشات الموبايل مع مسافة بينهم */}
-      <div className="grid grid-cols-2 gap-6 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 place-items-center sm:gap-8 md:gap-10">
+      {/* عرض المنتجات مع مسافات متناسقة على الموبايل */}
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 sm:gap-6 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 place-items-center md:gap-10">
         {flowers.map((item) => {
           if (
             selectedCategory === "all" ||
@@ -38,7 +39,7 @@ function ProductCard() {
           ) {
             return (
               <div
-                className="w-full sm:w-[160px] md:w-[180px] lg:w-[200px] p-4 sm:px-4 sm:py-6 md:p-4"
+                className="w-full max-w-[140px] sm:max-w-[160px] md:w-[180px] lg:w-[200px] p-2 sm:p-4"
                 key={item.id}
               >
                 <ProductItem
@@ -53,6 +54,7 @@ function ProductCard() {
           }
         })}
       </div>
+
       <ProductModal handleCloseModal={handleCloseModal} />
     </div>
   );

@@ -1,79 +1,37 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "../store/cartSlice";
+import { useNavigate } from "react-router-dom"; // ✅ لاستخدام التنقل
 import Add_Icon from "../assets/add-icon.svg";
 import Remove_Icon from "../assets/remove-icon.svg";
 
-function ProductItem({ id, name, img, price, handleOpenModal }) {
+function ProductItem({ id, name, img, price, oldPrice }) {
+  // إضافة oldPrice
   const dispatch = useDispatch();
   const cartItem = useSelector((state) => state.cart.cart);
+  const navigate = useNavigate(); // ✅ التنقل للصفحة الجديدة
 
-  const itemInCart = cartItem.find((item) => item.id === id);
-
-  const handleAddToCart = () => {
-    dispatch(
-      addToCart({
-        id: id,
-        name: name,
-        price: price,
-        amount: 1,
-        totalPrice: price,
-        image: img,
-      })
-    );
-  };
-
-  const handleRemoveFromCart = () => {
-    dispatch(
-      removeFromCart({
-        id: id,
-        name: name,
-        price: price,
-        amount: 1,
-        totalPrice: price,
-        image: img,
-      })
-    );
+  // ✅ التنقل عند الضغط على المنتج
+  const handleNavigateToDetails = () => {
+    navigate(`/product/${id}`);
   };
 
   return (
-    <div className="flex flex-col justify-start items-center w-[240px] h-[300px] rounded-2xl gap-2 bg-white shadow-box hover:scale-105 duration-200">
+    <div className="flex flex-col justify-start items-center w-[160px] sm:w-[200px] h-[260px] sm:h-[300px] rounded-2xl gap-3 sm:gap-4 bg-white shadow-box hover:scale-105 duration-200 mx-1 sm:mx-2">
       <div
-        className="w-full h-[170px] bg-cover bg-center bg-no-repeat rounded-t-lg bg-red-300 cursor-pointer"
+        className="w-full h-[150px] sm:h-[170px] bg-cover bg-center bg-no-repeat rounded-t-lg cursor-pointer"
         style={{ backgroundImage: `url(${img})` }}
-        onClick={() => handleOpenModal(id)}
+        onClick={handleNavigateToDetails} // ✅ التنقل عند الضغط على الصورة
       ></div>
-      <div className="flex flex-col h-[100px] items-start w-full gap-2 text-gray-800 px-4">
-        <p className="text-lg font-medium">{name}</p>
-        <div className="flex items-end gap-2">
-          <h3 className="text-2xl font-bold text-red-500">{price}</h3>
-          <span className="text-2xl font-bold text-red-500"> EGP </span>
-        </div>
-        <div className="flex w-full justify-end">
-          {!itemInCart ? (
-            <img
-              src={Add_Icon}
-              alt=""
-              onClick={handleAddToCart}
-              className="hover:scale-105 hover:duration-200 hover:ease-in cursor-pointer"
-            />
-          ) : (
-            <div className="flex justify-center items-center gap-4">
-              <img
-                src={Remove_Icon}
-                alt=""
-                className="cursor-pointer"
-                onClick={handleRemoveFromCart}
-              />
-              <p className="text-xl font-bold w-[15px]">{itemInCart.amount}</p>
-              <img
-                src={Add_Icon}
-                alt=""
-                onClick={handleAddToCart}
-                className="cursor-pointer"
-              />
-            </div>
-          )}
+      <div className="flex flex-col h-[90px] sm:h-[100px] items-start w-full gap-2 text-gray-800 px-3 sm:px-4">
+        <p className="text-sm sm:text-lg font-medium">{name}</p>
+        <div className="flex flex-col items-start gap-1 sm:gap-2">
+          <p className="text-sm sm:text-lg font-medium line-through text-gray-500">
+            {price + 200} EGP
+          </p>
+          <h3 className="text-md sm:text-2xl font-bold text-red-500">
+            {price} EGP
+          </h3>
         </div>
       </div>
     </div>

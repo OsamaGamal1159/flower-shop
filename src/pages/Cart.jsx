@@ -91,7 +91,8 @@ function Cart() {
           to_name: "Osama",
           from_email: form.email,
           to_email: "osamagamal1611@gmail.com",
-          message: `Phone: ${form.phone}, Address: ${form.address}, Message: ${
+          message: `Phone: ${form.phone},
+           Address: ${form.address}, Message: ${
             form.message
           }, Wants Chocolate: ${form.wantsChocolate ? "Yes" : "No"}`,
         },
@@ -100,7 +101,7 @@ function Cart() {
       .then(
         () => {
           setLoading(false);
-          alert("تم ارسال الاوردر بنجاح ");
+          alert("Order has been successfully sent. ");
 
           setForm({
             name: "",
