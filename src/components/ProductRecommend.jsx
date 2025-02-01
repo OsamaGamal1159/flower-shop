@@ -18,12 +18,12 @@ function ProductRecommend() {
   );
   const recommend = useSelector((state) => state.flowers.recommend);
 
-  // تحميل بيانات المنتجات عند فتح الصفحة
+  // Load product data on page load
   useEffect(() => {
     dispatch(setFlowers());
   }, [dispatch]);
 
-  // تحديث التوصيات بناءً على الفئة المختارة بعد تحميل البيانات
+  // Update recommendations based on the selected category after data load
   useEffect(() => {
     if (recommend.length === 0) {
       dispatch(setRecommend(selectedCategory));
@@ -44,21 +44,23 @@ function ProductRecommend() {
         Choose your flower
       </h3>
       <hr className="w-20 h-1 bg-red-400 border-none mt-2 mb-6 mx-auto md:mx-0" />
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8 place-items-center">
-        {recommend.map(
-          (item) =>
-            (selectedCategory === "all" ||
-              selectedCategory.toLowerCase() === item.category) && (
-              <ProductItem
-                key={item.id}
-                id={item.id}
-                name={item.name}
-                img={item.image}
-                price={item.price}
-                handleOpenModal={handleOpenModal}
-              />
-            )
-        )}
+      <div className="flex justify-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8 place-items-center">
+          {recommend.map(
+            (item) =>
+              (selectedCategory === "all" ||
+                selectedCategory.toLowerCase() === item.category) && (
+                <ProductItem
+                  key={item.id}
+                  id={item.id}
+                  name={item.name}
+                  img={item.image}
+                  price={item.price}
+                  handleOpenModal={handleOpenModal}
+                />
+              )
+          )}
+        </div>
       </div>
       <div className="flex justify-center mt-6">
         <Link
