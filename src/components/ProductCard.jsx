@@ -31,31 +31,33 @@ function ProductCard() {
       <hr className="w-[90px] h-[5px] bg-red-400 border-none mt-2 mb-10 mx-auto" />
 
       {/* عرض المنتجات مع مسافات متناسقة على الموبايل */}
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 sm:gap-6 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 place-items-center md:gap-10">
-        {flowers.map((item) => {
-          if (
-            selectedCategory === "all" ||
-            selectedCategory.toLowerCase() === item.category
-          ) {
-            return (
-              <div
-                className="w-full max-w-[140px] sm:max-w-[160px] md:w-[180px] lg:w-[200px] p-2 sm:p-4"
-                key={item.id}
-              >
-                <ProductItem
-                  id={item.id}
-                  name={item.name}
-                  img={item.image}
-                  price={item.price}
-                  handleOpenModal={handleOpenModal}
-                />
-              </div>
-            );
-          }
-        })}
-      </div>
+      <div className="flex justify-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8 place-items-center">
+          {flowers.map((item) => {
+            if (
+              selectedCategory === "all" ||
+              selectedCategory.toLowerCase() === item.category
+            ) {
+              return (
+                <div
+                  className="w-full max-w-[140px] sm:max-w-[160px] md:w-[180px] lg:w-[200px] p-2 sm:p-4"
+                  key={item.id}
+                >
+                  <ProductItem
+                    id={item.id}
+                    name={item.name}
+                    img={item.image}
+                    price={item.price}
+                    handleOpenModal={handleOpenModal}
+                  />
+                </div>
+              );
+            }
+          })}
+        </div>
 
-      <ProductModal handleCloseModal={handleCloseModal} />
+        <ProductModal handleCloseModal={handleCloseModal} />
+      </div>
     </div>
   );
 }
