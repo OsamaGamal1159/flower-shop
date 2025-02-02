@@ -351,4 +351,24 @@ export const flowers = [
       "Available in different designs and textures, perfect for enhancing the presentation of bouquets.",
     category: "engagement",
   },
+  {
+    id: 28,
+    name: "graduation",
+    price: 550,
+    description: "Elegant wrapper paper for wrapping floral arrangements.",
+    image: "/images/graduation.png",
+    details:
+      "Available in different designs and textures, perfect for enhancing the presentation of bouquets.",
+    category: "graduation",
+  },
+  {
+    id: 29,
+    name: "graduation",
+    price: 400,
+    description: "Elegant wrapper paper for wrapping floral arrangements.",
+    image: "/images/graduation2.png",
+    details:
+      "Available in different designs and textures, perfect for enhancing the presentation of bouquets.",
+    category: "graduation",
+  },
 ];
