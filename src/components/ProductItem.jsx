@@ -19,7 +19,7 @@ function ProductItem({ id, name, img, price, oldPrice }) {
   return (
     <div className="flex flex-col justify-start items-center w-[150px] sm:w-[180px] h-[240px] sm:h-[280px] rounded-2xl gap-2 sm:gap-3 bg-white shadow-box hover:scale-105 duration-200 mx-2 sm:mx-3">
       <div
-        className="w-full h-[130px] sm:h-[150px] bg-cover bg-center bg-no-repeat rounded-t-lg cursor-pointer"
+        className="w-full h-[110px] sm:h-[150px] bg-cover bg-center bg-no-repeat rounded-t-lg cursor-pointer"
         style={{ backgroundImage: `url(${img})` }}
         onClick={handleNavigateToDetails} // ✅ التنقل عند الضغط على الصورة
       ></div>

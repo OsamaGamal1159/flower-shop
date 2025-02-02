@@ -100,9 +100,9 @@ function ProductDetails() {
     </tr>
   </table>
 `,
-          to_name: "Osama",
+          to_name: "ahmed",
           from_email: form.email,
-          to_email: "osamagamal1611@gmail.com",
+          to_email: "ahmedtaha.5261@gmail.com",
         },
         "_qcbYCiPrcvMcT0Kp"
       )
@@ -142,7 +142,7 @@ function ProductDetails() {
     <div className="product-details-container flex flex-col items-center justify-center p-6 space-y-6">
       <h2 className="text-3xl font-bold text-gray-800">{product.name}</h2>
       <div
-        className="w-full max-w-md h-[300px] bg-cover bg-center rounded-lg shadow-lg"
+        className="w-full max-w-md h-[500px] bg-cover bg-center rounded-lg shadow-lg"
         style={{ backgroundImage: `url(${product.image})` }}
       ></div>
       <div className="flex flex-col items-center text-center gap-4 mt-6">
@@ -223,6 +223,8 @@ function ProductDetails() {
             onChange={handleChange}
             placeholder="Enter Your Message.."
             className="border p-3 rounded-md focus:ring-2 focus:ring-red-500"
+            rows="4" // يمكنك تغيير الرقم حسب الحجم اللي تريده
+            style={{ resize: "vertical" }} // يسمح بتغيير حجم المربع عموديًا
           ></textarea>
         </div>
 
@@ -236,7 +238,7 @@ function ProductDetails() {
               onChange={handleChange}
               className="focus:ring-2 focus:ring-red-500"
             />
-            <span>Ferrero Rocher or similar (+LE 400)</span>
+            <span>Ferrero Rocher or similar (+LE 500)</span>
           </label>
         </div>
 
@@ -247,11 +249,11 @@ function ProductDetails() {
           className="border p-3 rounded-md focus:ring-2 focus:ring-red-500"
         >
           <option value="">No Balloon / Choose Balloon</option>
-          <option value="Congratulations">Congratulations (+ LE 200)</option>
-          <option value="I Love You">I Love You (+ LE 200)</option>
-          <option value="Baby Boy">Baby Boy (+ LE 200)</option>
-          <option value="Baby Girl">Baby Girl (+ LE 200)</option>
-          <option value="Birthday">Birthday (+ LE 200)</option>
+          <option value="Congratulations">Congratulations (+ LE 100)</option>
+          <option value="I Love You">I Love You (+ LE 100)</option>
+          <option value="Baby Boy">Baby Boy (+ LE 100)</option>
+          <option value="Baby Girl">Baby Girl (+ LE 100)</option>
+          <option value="Birthday">Birthday (+ LE 100)</option>
         </select>
 
         {errors.heliumBalloon && (
