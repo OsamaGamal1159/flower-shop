@@ -372,7 +372,7 @@ export const flowers = [
   },
   {
     id: 30,
-    name: "graduation30",
+    name: "graduation",
     price: 500,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation3.png",
@@ -381,7 +381,7 @@ export const flowers = [
   },
   {
     id: 31,
-    name: "graduation31",
+    name: "graduation",
     price: 450,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation4.png",
@@ -391,7 +391,7 @@ export const flowers = [
   },
   {
     id: 32,
-    name: "graduation32",
+    name: "graduation",
     price: 450,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation5.png",
@@ -401,7 +401,7 @@ export const flowers = [
   },
   {
     id: 33,
-    name: "graduation33",
+    name: "graduation",
     price: 450,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation6.png",
@@ -410,7 +410,7 @@ export const flowers = [
   },
   {
     id: 34,
-    name: "graduation34",
+    name: "graduation",
     price: 450,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation7.png",
@@ -419,7 +419,7 @@ export const flowers = [
   },
   {
     id: 35,
-    name: "graduation35",
+    name: "graduation",
     price: 650,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation8.png",
@@ -428,7 +428,7 @@ export const flowers = [
   },
   {
     id: 36,
-    name: "graduation36",
+    name: "graduation",
     price: 500,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation9.png",
@@ -437,7 +437,7 @@ export const flowers = [
   },
   {
     id: 37,
-    name: "graduation37",
+    name: "graduation",
     price: 450,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation10.png",
@@ -446,7 +446,7 @@ export const flowers = [
   },
   {
     id: 38,
-    name: "graduation38",
+    name: "graduation",
     price: 650,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation11.png",
@@ -455,7 +455,7 @@ export const flowers = [
   },
   {
     id: 41,
-    name: "graduation41",
+    name: "graduation",
     price: 550,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation14.png",
@@ -464,7 +464,7 @@ export const flowers = [
   },
   {
     id: 42,
-    name: "graduation42",
+    name: "graduation",
     price: 500,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation42.png",
@@ -473,7 +473,7 @@ export const flowers = [
   },
   {
     id: 43,
-    name: "graduation43",
+    name: "graduation",
     price: 550,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation16.png",
@@ -482,7 +482,7 @@ export const flowers = [
   },
   {
     id: 44,
-    name: "graduation44",
+    name: "graduation",
     price: 600,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation17.png",
