@@ -24,13 +24,11 @@ function ProductCard() {
   };
 
   return (
-    <div className="px-4 md:px-8">
-      <h3 className="text-2xl font-bold leading-9 text-gray-800 text-center mb-8">
+    <div className="px-4 md:px-8 lg:px-16">
+      <h3 className="text-2xl font-bold leading-9 text-gray-800 text-center md:text-left">
         Choose your flower
       </h3>
-      <hr className="w-[90px] h-[5px] bg-red-400 border-none mt-2 mb-10 mx-auto" />
-
-      {/* عرض المنتجات مع مسافات متناسقة على الموبايل */}
+      <hr className="w-20 h-1 bg-red-400 border-none mt-2 mb-6 mx-auto md:mx-0" />
       <div className="flex justify-center">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8 place-items-center">
           {flowers.map((item) => {
