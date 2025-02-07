@@ -1,7 +1,7 @@
 export const flowers = [
   {
     id: 1,
-    name: "Rose",
+    name: "fw1",
     price: 750,
     description: "A beautiful rose with vibrant red petals.",
     image: "/images/khotoba1.png",
@@ -11,7 +11,7 @@ export const flowers = [
   },
   {
     id: 2,
-    name: "Tulip",
+    name: "fw2",
     price: 550,
     description: "Bright and colorful tulips that brighten up any room.",
     image: "/images/khotoba2.png",
@@ -20,7 +20,7 @@ export const flowers = [
   },
   {
     id: 3,
-    name: "Sunflower",
+    name: "fw3",
     price: 480,
     description:
       "Large and cheerful sunflowers that bring sunshine to your day.",
@@ -31,7 +31,7 @@ export const flowers = [
   },
   {
     id: 4,
-    name: "Lily",
+    name: "fw4",
     price: 750,
     description: "Elegant lilies with a sweet fragrance.",
     image: "/images/khotoba4.png",
@@ -40,7 +40,7 @@ export const flowers = [
   },
   {
     id: 5,
-    name: "Orchid",
+    name: "fw5",
     price: 750,
     description: "Exotic orchids with intricate patterns and vibrant colors.",
     image: "/images/khotoba5.png",
@@ -49,7 +49,7 @@ export const flowers = [
   },
   {
     id: 6,
-    name: "Daisy",
+    name: "fw6",
     price: 600,
     description:
       "Simple and charming daisies that are perfect for any occasion.",
@@ -59,7 +59,7 @@ export const flowers = [
   },
   {
     id: 7,
-    name: "Chrysanthemum",
+    name: "fw7",
     price: 650,
     description:
       "Colorful chrysanthemums that add a burst of color to your space.",
@@ -69,7 +69,7 @@ export const flowers = [
   },
   {
     id: 8,
-    name: "Peony",
+    name: "fw8",
     price: 1650,
     description: "Luxurious peonies with large, fluffy blooms.",
     image: "/images/khotoba8.png",
@@ -78,7 +78,7 @@ export const flowers = [
   },
   {
     id: 9,
-    name: "Lavender",
+    name: "fw9",
     price: 2200,
     description:
       "Fragrant lavender that brings a touch of calm and relaxation.",
@@ -88,7 +88,7 @@ export const flowers = [
   },
   {
     id: 10,
-    name: "Carnation",
+    name: "fw10",
     price: 650,
     description: "Elegant carnations with a range of colors and a spicy scent.",
     image: "/images/khotoba10.png",
@@ -98,7 +98,7 @@ export const flowers = [
   },
   {
     id: 11,
-    name: "Iris",
+    name: "fw12",
     price: 550,
     description: "Striking irises with unique and vibrant hues.",
     image: "/images/khotoba11.png",
@@ -107,7 +107,7 @@ export const flowers = [
   },
   {
     id: 12,
-    name: "Hibiscus",
+    name: "fw13",
     price: 1200,
     description: "Tropical hibiscus with bold colors and exotic appeal.",
     image: "/images/khotoba12.png",
@@ -116,7 +116,7 @@ export const flowers = [
   },
   {
     id: 13,
-    name: "Gerbera Daisy",
+    name: "fw14",
     price: 600,
     description:
       "Bright and cheerful gerbera daisies that come in many colors.",
@@ -126,7 +126,7 @@ export const flowers = [
   },
   {
     id: 14,
-    name: "Jasmine",
+    name: "fw15",
     price: 400,
     description: "Sweet-smelling jasmine flowers that enhance any bouquet.",
     image: "/images/khotoba14.png",
@@ -135,7 +135,7 @@ export const flowers = [
   },
   {
     id: 15,
-    name: "Magnolia",
+    name: "fw16",
     price: 650,
     description: "Elegant magnolias with large, fragrant blooms.",
     image: "/images/khotoba15.png",
@@ -144,7 +144,7 @@ export const flowers = [
   },
   {
     id: 16,
-    name: "Gardenia",
+    name: "fw17",
     price: 550,
     description: "Fragrant gardenias that add a touch of elegance.",
     image: "/images/khotoba16.png",
@@ -153,7 +153,7 @@ export const flowers = [
   },
   {
     id: 17,
-    name: "Snapdragon",
+    name: "fw18",
     price: 550,
     description:
       "Colorful snapdragons that add height and interest to arrangements.",
@@ -164,7 +164,7 @@ export const flowers = [
   },
   {
     id: 18,
-    name: "Amaryllis",
+    name: "fw19",
     price: 600,
     description: "Bold amaryllis with large, striking flowers.",
     image: "/images/khotoba18.png",
@@ -173,7 +173,7 @@ export const flowers = [
   },
   {
     id: 19,
-    name: "Poppy",
+    name: "fw20",
     price: 500,
     description: "Delicate poppies with vibrant colors.",
     image: "/images/khotoba19.png",
@@ -183,7 +183,7 @@ export const flowers = [
   },
   {
     id: 20,
-    name: "Zinnia",
+    name: "fw21",
     price: 750,
     description: "Colorful zinnias that brighten up any garden or bouquet.",
     image: "/images/khotoba20.png",
@@ -193,7 +193,7 @@ export const flowers = [
   },
   {
     id: 21,
-    name: "Vase",
+    name: "fw22",
     price: 450,
     description:
       "Elegant glass vase perfect for displaying flower arrangements.",
@@ -203,7 +203,7 @@ export const flowers = [
   },
   {
     id: 22,
-    name: "Flower ",
+    name: "fw23 ",
     price: 650,
     description:
       "Woven basket perfect for rustic and garden-themed arrangements.",
@@ -213,7 +213,7 @@ export const flowers = [
   },
   {
     id: 23,
-    name: "Ribbon",
+    name: "fw24",
     price: 750,
     description: "Decorative ribbon for tying and embellishing bouquets.",
     image: "/images/khotoba23.png",
@@ -223,7 +223,7 @@ export const flowers = [
   },
   {
     id: 24,
-    name: "Wrapper Paper",
+    name: "fw25",
     price: 650,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/khotoba24.png",
@@ -233,7 +233,7 @@ export const flowers = [
   },
   {
     id: 25,
-    name: "Wrapper Paper",
+    name: "fw26",
     price: 500,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/khotoba25.png",
@@ -243,7 +243,7 @@ export const flowers = [
   },
   {
     id: 26,
-    name: "Wrapper Paper",
+    name: "fw27",
     price: 700,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/khotoba26.png",
@@ -253,7 +253,7 @@ export const flowers = [
   },
   {
     id: 27,
-    name: "Wrapper Paper",
+    name: "egm1",
     price: 8,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/wrapper-paper.jpg",
@@ -263,7 +263,7 @@ export const flowers = [
   },
   {
     id: 27,
-    name: "Wrapper Paper",
+    name: "egm2",
     price: 8,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/wrapper-paper.jpg",
@@ -273,7 +273,7 @@ export const flowers = [
   },
   {
     id: 27,
-    name: "Wrapper Paper",
+    name: "egm3",
     price: 8,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/wrapper-paper.jpg",
@@ -283,7 +283,7 @@ export const flowers = [
   },
   {
     id: 27,
-    name: "Wrapper Paper",
+    name: "egm4",
     price: 8,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/wrapper-paper.jpg",
@@ -293,7 +293,7 @@ export const flowers = [
   },
   {
     id: 27,
-    name: "Wrapper Paper",
+    name: "egm5 ",
     price: 8,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/wrapper-paper.jpg",
@@ -303,7 +303,7 @@ export const flowers = [
   },
   {
     id: 27,
-    name: "Wrapper Paper",
+    name: "egm6",
     price: 8,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/wrapper-paper.jpg",
@@ -313,7 +313,7 @@ export const flowers = [
   },
   {
     id: 27,
-    name: "Wrapper Paper",
+    name: "egm7",
     price: 8,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/wrapper-paper.jpg",
@@ -323,7 +323,7 @@ export const flowers = [
   },
   {
     id: 27,
-    name: "Wrapper Paper",
+    name: "egm8",
     price: 8,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/wrapper-paper.jpg",
@@ -333,7 +333,7 @@ export const flowers = [
   },
   {
     id: 27,
-    name: "Wrapper Paper",
+    name: "egm9",
     price: 8,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/wrapper-paper.jpg",
@@ -343,7 +343,7 @@ export const flowers = [
   },
   {
     id: 27,
-    name: "Wrapper Paper",
+    name: "egm10",
     price: 8,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/wrapper-paper.jpg",
@@ -353,7 +353,7 @@ export const flowers = [
   },
   {
     id: 28,
-    name: "graduation",
+    name: "gd1",
     price: 550,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation.png",
@@ -362,7 +362,7 @@ export const flowers = [
   },
   {
     id: 29,
-    name: "graduation",
+    name: "gd2",
     price: 400,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation2.png",
@@ -372,7 +372,7 @@ export const flowers = [
   },
   {
     id: 30,
-    name: "graduation",
+    name: "gd3",
     price: 500,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation3.png",
@@ -381,7 +381,7 @@ export const flowers = [
   },
   {
     id: 31,
-    name: "graduation",
+    name: "gd4",
     price: 450,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation4.png",
@@ -391,7 +391,7 @@ export const flowers = [
   },
   {
     id: 32,
-    name: "graduation",
+    name: "gd5",
     price: 450,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation5.png",
@@ -401,7 +401,7 @@ export const flowers = [
   },
   {
     id: 33,
-    name: "graduation",
+    name: "gd6",
     price: 450,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation6.png",
@@ -410,7 +410,7 @@ export const flowers = [
   },
   {
     id: 34,
-    name: "graduation",
+    name: "gd7",
     price: 450,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation7.png",
@@ -419,7 +419,7 @@ export const flowers = [
   },
   {
     id: 35,
-    name: "graduation",
+    name: "gd8",
     price: 650,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation8.png",
@@ -428,7 +428,7 @@ export const flowers = [
   },
   {
     id: 36,
-    name: "graduation",
+    name: "gd9",
     price: 500,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation9.png",
@@ -437,7 +437,7 @@ export const flowers = [
   },
   {
     id: 37,
-    name: "graduation",
+    name: "gd10",
     price: 450,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation10.png",
@@ -446,7 +446,7 @@ export const flowers = [
   },
   {
     id: 38,
-    name: "graduation",
+    name: "gd11",
     price: 650,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation11.png",
@@ -455,7 +455,7 @@ export const flowers = [
   },
   {
     id: 41,
-    name: "graduation",
+    name: "gd12",
     price: 550,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation14.png",
@@ -464,7 +464,7 @@ export const flowers = [
   },
   {
     id: 42,
-    name: "graduation",
+    name: "gd13",
     price: 500,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation42.png",
@@ -473,7 +473,7 @@ export const flowers = [
   },
   {
     id: 43,
-    name: "graduation",
+    name: "gd14",
     price: 550,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation16.png",
@@ -482,12 +482,219 @@ export const flowers = [
   },
   {
     id: 44,
-    name: "graduation",
+    name: "gd15",
     price: 600,
     description: "Elegant wrapper paper for wrapping floral arrangements.",
     image: "/images/graduation17.png",
     details:
       "Artificial White Flower Bouquet with Baby's Breath and Imported Wrapping",
     category: "graduation",
+  },
+  {
+    id: 45,
+    name: "wd1",
+    price: 650,
+    description: "Elegant wrapper paper for wrapping floral arrangements.",
+    image: "/images/wedding1.png",
+    details: "Artificial Flowers",
+    category: "wedding",
+  },
+  {
+    id: 46,
+    name: "wd2",
+    price: 525,
+    description: "Elegant wrapper paper for wrapping floral arrangements.",
+    image: "/images/wedding2.png",
+    details: "Artificial Flowers",
+    category: "wedding",
+  },
+  {
+    id: 47,
+    name: "wd3",
+    price: 500,
+    description: "Elegant wrapper paper for wrapping floral arrangements.",
+    image: "/images/wedding3.png",
+    details: "Fresh Flowers",
+    category: "wedding",
+  },
+  {
+    id: 48,
+    name: "wd4",
+    price: 400,
+    description: "Elegant wrapper paper for wrapping floral arrangements.",
+    image: "/images/wedding4.png",
+    details: "Artificial Flowers with Pearls",
+    category: "wedding",
+  },
+  {
+    id: 49,
+    name: "wd5",
+    price: 650,
+    description: "Elegant wrapper paper for wrapping floral arrangements.",
+    image: "/images/wedding5.png",
+    details: "Artificial Flowers with Pearls",
+    category: "wedding",
+  },
+  {
+    id: 50,
+    name: "wd6",
+    price: 550,
+    description: "Elegant wrapper paper for wrapping floral arrangements.",
+    image: "/images/wedding6.png",
+    details: "Artificial Flowers",
+    category: "wedding",
+  },
+  {
+    id: 51,
+    name: "wd7",
+    price: 500,
+    description: "Elegant wrapper paper for wrapping floral arrangements.",
+    image: "/images/wedding7.png",
+    details: "Artificial Flowers with Pearls",
+    category: "wedding",
+  },
+  {
+    id: 52,
+    name: "wd8",
+    price: 450,
+    description: "Elegant wrapper paper for wrapping floral arrangements.",
+    image: "/images/wedding8.png",
+    details: "Artificial Flowers",
+    category: "wedding",
+  },
+  {
+    id: 53,
+    name: "wd9",
+    price: 400,
+    description: "Elegant wrapper paper for wrapping floral arrangements.",
+    image: "/images/wedding9.png",
+    details: "Artificial Flowers",
+    category: "wedding",
+  },
+  {
+    id: 54,
+    name: "wd10",
+    price: 400,
+    description: "Elegant wrapper paper for wrapping floral arrangements.",
+    image: "/images/wedding10.png",
+    details: "Artificial Flowers",
+    category: "wedding",
+  },
+  {
+    id: 55,
+    name: "wd11",
+    price: 450,
+    description: "Elegant wrapper paper for wrapping floral arrangements.",
+    image: "/images/wedding11.png",
+    details: "Artificial Flowers",
+    category: "wedding",
+  },
+  {
+    id: 56,
+    name: "wd12",
+    price: 750,
+    description: "Elegant wrapper paper for wrapping floral arrangements.",
+    image: "/images/wedding12.png",
+    details: "The flower type is entirely artificial with pearls.",
+    category: "wedding",
+  },
+  {
+    id: 57,
+    name: "wd13",
+    price: 450,
+    wedding: "Elegant wrapper paper for wrapping floral arrangements.",
+    image: "/images/wedding13.png",
+    details: "Artificial Flowers",
+    category: "wedding",
+  },
+  {
+    id: 58,
+    name: "wd14",
+    price: 525,
+    description: "Elegant wrapper paper for wrapping floral arrangements.",
+    image: "/images/wedding14.png",
+    details: "Artificial Flowers",
+    category: "wedding",
+  },
+  {
+    id: 59,
+    name: "wd15",
+    price: 500,
+    description: "Elegant wrapper paper for wrapping floral arrangements.",
+    image: "/images/wedding15.png",
+    details: "Artificial Flowers with Pearls",
+    category: "wedding",
+  },
+  {
+    id: 60,
+    name: "wd16",
+    price: 500,
+    description: "Elegant wrapper paper for wrapping floral arrangements.",
+    image: "/images/wedding16.png",
+    details: "Artificial Flowers",
+    category: "wedding",
+  },
+  {
+    id: 61,
+    name: "wd17",
+    price: 500,
+    description: "Elegant wrapper paper for wrapping floral arrangements.",
+    image: "/images/wedding17.png",
+    details: "Artificial Flowers",
+    category: "wedding",
+  },
+  {
+    id: 62,
+    name: "wd18",
+    price: 550,
+    description: "Elegant wrapper paper for wrapping floral arrangements.",
+    image: "/images/wedding18.png",
+    details: "Artificial Flowers",
+    category: "wedding",
+  },
+  {
+    id: 63,
+    name: "wd19",
+    price: 540,
+    description: "Elegant wrapper paper for wrapping floral arrangements.",
+    image: "/images/wedding19.png",
+    details: "Artificial Flowers",
+    category: "wedding",
+  },
+  {
+    id: 64,
+    name: "wd20",
+    price: 575,
+    description: "Elegant wrapper paper for wrapping floral arrangements.",
+    image: "/images/wedding20.png",
+    details: "Velvet-Touch Artificial Flowers 575",
+    category: "wedding",
+  },
+  {
+    id: 65,
+    name: "wd21",
+    price: 500,
+    description: "Elegant wrapper paper for wrapping floral arrangements.",
+    image: "/images/wedding21.png",
+    details: "Artificial Flowers",
+    category: "wedding",
+  },
+  {
+    id: 66,
+    name: "wd22",
+    price: 400,
+    description: "Elegant wrapper paper for wrapping floral arrangements.",
+    image: "/images/wedding22.png",
+    details: "Fresh Flowers",
+    category: "wedding",
+  },
+  {
+    id: 67,
+    name: "wd23",
+    price: 450,
+    description: "Elegant wrapper paper for wrapping floral arrangements.",
+    image: "/images/wedding23.png",
+    details: "Artificial Flowers",
+    category: "wedding",
   },
 ];
