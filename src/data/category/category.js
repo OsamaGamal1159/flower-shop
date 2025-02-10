@@ -33,7 +33,7 @@ export const category_list = [
     category_status: checkedIcon,
   },
   {
-    category_name: "Boxes",
+    category_name: "boxes",
     category_img: basketIcon,
     category_status: checkedIcon,
   },

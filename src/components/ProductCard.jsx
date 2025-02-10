@@ -29,6 +29,7 @@ function ProductCard() {
         Choose your flower
       </h3>
       <hr className="w-20 h-1 bg-red-400 border-none mt-2 mb-6 mx-auto md:mx-0" />
+
       <div className="flex justify-center">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8 place-items-center">
           {flowers.map((item) => {
