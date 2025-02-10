@@ -51,11 +51,7 @@ function Home() {
               The Beauty and Charm of a Flower Bouquet
             </h1>
             <hr className="w-1/5 h-[5px] bg-red-400 border-none my-5 " />
-            <p className="text-sm text-white pb-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-              itaque ratione vel saepe culpa eveniet ab officiis molestiae odit
-              sequi!
-            </p>
+            <p className="text-sm text-white pb-5"></p>
             <Link to="/products">
               <button className="bg-red-400 px-7 py-2 text-white font-medium hover:scale-110 transition duration-200">
                 Shop Now
@@ -82,11 +78,7 @@ function Home() {
               The Beauty and Charm of a Flower Bouquet
             </h1>
             <hr className="w-1/5 h-[5px] bg-red-400 border-none my-5" />
-            <p className="text-sm text-white pb-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-              itaque ratione vel saepe culpa eveniet ab officiis molestiae odit
-              sequi!
-            </p>
+            <p className="text-sm text-white pb-5"></p>
             <Link to="/product">
               <button className="bg-red-400 px-7 py-2 text-white font-medium hover:scale-110 transition duration-200">
                 Shop Now
@@ -113,11 +105,7 @@ function Home() {
               The Beauty and Charm of a Flower Bouquet
             </h1>
             <hr className="w-1/5 h-[5px] bg-gray-700 border-none my-5" />
-            <p className="text-sm text-gray-500 pb-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-              itaque ratione vel saepe culpa eveniet ab officiis molestiae odit
-              sequi!
-            </p>
+            <p className="text-sm text-gray-500 pb-5"></p>
             <Link to="/product">
               <button className="bg-gray-800 px-7 py-2 text-white font-medium hover:scale-110 transition duration-200">
                 Shop Now
@@ -144,11 +132,7 @@ function Home() {
               The Beauty and Charm of a Flower Bouquet
             </h1>
             <hr className="w-1/5 h-[5px] bg-lime-700 border-none my-5" />
-            <p className="text-sm text-white pb-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-              itaque ratione vel saepe culpa eveniet ab officiis molestiae odit
-              sequi!
-            </p>
+            <p className="text-sm text-white pb-5"></p>
             <Link to="/product">
               <button className="bg-lime-800 px-7 py-2 text-white font-medium hover:scale-110 transition duration-200">
                 Shop Now
