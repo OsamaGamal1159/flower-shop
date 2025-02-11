@@ -38,7 +38,7 @@ export const category_list = [
     category_status: checkedIcon,
   },
   {
-    category_name: "Small bouquets",
+    category_name: "love",
     category_img: basketIcon,
     category_status: checkedIcon,
   },
